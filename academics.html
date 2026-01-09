@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Beroil Govt. Primary School</title>
+    <!-- CSS CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #006837;
+            --secondary: #f15a24;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+        }
+
+        .nav-link.active {
+            color: var(--primary) !important;
+            font-weight: 600;
+        }
+
+        /* Header */
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Subject Cards */
+        .subject-card {
+            border: none;
+            border-radius: 15px;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            height: 100%;
+            border-left: 5px solid var(--primary);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .subject-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        /* Routine Table */
+        .routine-container {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .table thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 104, 55, 0.05);
+        }
+
+        /* Assessment Section */
+        .assessment-box {
+            background: var(--primary);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .assessment-box::before {
+            content: '\f5da';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            font-size: 8rem;
+            opacity: 0.1;
+        }
+
+        /* Facilities Icon Circle */
+        .facility-circle {
+            width: 80px;
+            height: 80px;
+            background: rgba(241, 90, 36, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--secondary);
+            font-size: 1.8rem;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 60px 0 30px;
+        }
+    </style>
+    <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top  bg-white shadow-sm" id="navbar">
+        <div class="container">
+            <!-- LOGO ONLY -->
+            <a class="navbar-brand p-0" href="index.html">
+                <img src="images/bgps_logo.png" 
+                     alt="BGPS Logo" style="height: 80px; width: 80px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <header class="page-header">
+        <div class="container" data-aos="zoom-out">
+            <h1 class="display-4 fw-bold">Academic Programs</h1>
+            <p class="lead">Nurturing young minds through the National Competency-Based Curriculum.</p>
+        </div>
+    </header>
+
+    <!-- CURRICULUM OVERVIEW -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-secondary fw-bold text-uppercase">What We Teach</h6>
+                <h2 class="fw-bold" style="color: var(--primary);">Our Core Subjects</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">Following the latest Ministry of Primary and
+                    Mass Education guidelines, we focus on balanced psycho-physical development.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="subject-card">
+                        <i class="fas fa-book-open subject-icon"></i>
+                        <h4>Bangla</h4>
+                        <p class="text-muted small">Developing foundational literacy, creative writing, and appreciation
+                            for our rich cultural heritage.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="subject-card">
+                        <i class="fas fa-language subject-icon"></i>
+                        <h4>English</h4>
+                        <p class="text-muted small">Focusing on four basic skills: Listening, Speaking, Reading, and
+                            Writing through CLT methods.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="subject-card">
+                        <i class="fas fa-calculator subject-icon"></i>
+                        <h4>Mathematics</h4>
+                        <p class="text-muted small">Building logical reasoning and problem-solving skills starting from
+                            basic arithmetic to geometry.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="subject-card">
+                        <i class="fas fa-flask subject-icon"></i>
+                        <h4>Science</h4>
+                        <p class="text-muted small">Elementary Science topics that encourage children to observe and
+                            explore the world around them.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLASS ROUTINE (2026 UPDATED) -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="fw-bold" style="color: var(--primary);">Daily Class Routine</h2>
+                    <p class="text-muted">Updated for the 2026 Academic Session. We operate a single-shift system for
+                        maximum contact time between teachers and students.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end" data-aos="fade-left">
+                    <span class="badge bg-success p-2 px-3">School Ends at 4:00 PM</span>
+                </div>
+            </div>
+
+            <div class="routine-container" data-aos="zoom-in">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-4">Time Period</th>
+                                <th class="py-3">Activity / Subject</th>
+                                <th class="py-3">Grades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold">09:00 - 09:30</td>
+                                <td>Morning Assembly & Physical Exercise</td>
+                                <td>All Classes</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold">09:30 - 10:15</td>
+                                <td>1st Period: Core Subject (Bangla/Math)</td>
+                                <td>Class 1 - 5</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold">12:30 - 01:15</td>
+                                <td class="text-secondary fw-bold">Lunch & Prayer Break</td>
+                                <td>All Classes</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold">01:15 - 03:00</td>
+                                <td>Science, Religion & Arts Activities</td>
+                                <td>Class 3 - 5</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold">03:00 - 04:00</td>
+                                <td>Special remedial, SRM & Co-curricular</td>
+                                <td>Class 4 - 5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT STRATEGY -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="assessment-box">
+                        <h3 class="fw-bold mb-4">New Assessment Policy</h3>
+                        <p>Under the new national curriculum implemented in 2026, we have shifted from traditional
+                            high-stakes exams to <strong>Continuous Assessment</strong>.</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3"><i class="fas fa-check-circle me-2 text-warning"></i> No formal
+                                examinations up to Class 3.</li>
+                            <li class="mb-3"><i class="fas fa-check-circle me-2 text-warning"></i> Evaluation based on
+                                class projects, presentations, and behavior.</li>
+                            <li class="mb-3"><i class="fas fa-check-circle me-2 text-warning"></i> Focus on "Learning by
+                                Doing" and soft skills development.</li>
+                        </ul>
+
+                        <a href="assets/guidline.pdf" download class="btn btn-light mt-3 px-4 fw-bold">
+                            <i class="fas fa-file-pdf me-2"></i> Download Full Guide
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="p-4 border-start border-4 border-success">
+                        <h4 class="fw-bold">Academic Facilities</h4>
+                        <div class="row mt-4 g-4 text-center">
+                            <div class="col-6">
+                                <div class="facility-circle"><i class="fas fa-laptop-code"></i></div>
+                                <h6 class="fw-bold">Multimedia Classroom</h6>
+                            </div>
+                            <div class="col-6">
+                                <div class="facility-circle"><i class="fas fa-book"></i></div>
+                                <h6 class="fw-bold">Book Corner</h6>
+                            </div>
+                            <div class="col-6">
+                                <div class="facility-circle"><i class="fas fa-soccer-ball"></i></div>
+                                <h6 class="fw-bold">Sports Ground</h6>
+                            </div>
+                            <div class="col-6">
+                                <div class="facility-circle"><i class="fas fa-tint"></i></div>
+                                <h6 class="fw-bold">Clean WASH Block</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Beroil GPS</h5>
+                    <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Find Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Berail, Jamalpur, Joypurhat</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+
+</html>

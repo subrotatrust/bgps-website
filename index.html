@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beroil Govt. Primary School | Home</title>
+    <!-- CSS CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { --primary: #006837; --secondary: #f15a24; }
+        
+        /* --- FIX STARTS HERE --- */
+        html, body {
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* --- FIX ENDS HERE --- */
+
+        .navbar-brand { font-weight: 700; color: var(--primary) !important; }
+        .btn-primary { background: var(--primary); border: none; }
+        
+        /* Hero section updated to handle relative positioning better */
+        .hero-section { 
+            height: 90vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=80'); 
+            background-size: cover; 
+            background-position: center;
+            display: flex; 
+            align-items: center; 
+            color: white; 
+            width: 100%;
+        }
+
+        section { padding: 80px 0; }
+        .counter-box { background: var(--primary); color: white; border-radius: 15px; padding: 30px; }
+        .notice-board { border-left: 5px solid var(--secondary); background: #fdf2f2; padding: 20px; border-radius: 10px; }
+        footer { background: #111; color: white; padding: 40px 0; }
+        
+        /* Fix for Owl Carousel inside Bootstrap */
+        .owl-carousel .owl-stage-outer {
+            overflow: hidden;
+        }
+
+        
+    .tour-img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px; /* Smooth corners */
+        height: 350px; /* Fixed height for symmetry */
+    }
+    .tour-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+    .tour-img-container:hover img {
+        transform: scale(1.1); /* Zoom effect on hover */
+    }
+    .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    .tour-img-container:hover .image-overlay {
+        opacity: 1;
+    }
+    #shiningStarImage{
+        height: 122px;
+        width: 122px;
+    }
+    
+    </style>
+    <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top  bg-white shadow-sm" id="navbar">
+        <div class="container">
+            <!-- LOGO ONLY -->
+            <a class="navbar-brand p-0" href="index.html">
+                <img src="images/bgps_logo.png" 
+                      alt="BGPS Logo" style="height: 80px; width: 80px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- SECTION 1: HERO (OWL CAROUSEL) -->
+    <header class="owl-carousel owl-theme main-slider">
+        <div class="hero-section text-center">
+            <div class="container" data-aos="zoom-out">
+                <h1 class="display-3 fw-bold">Welcome to Beroil Govt. Primary School</h1>
+                <p class="lead">Building a brighter future for every child since 1990.</p>
+                <a href="about.html" class="btn btn-primary btn-lg mt-3">Discover More</a>
+            </div>
+        </div>
+
+        <div class="hero-section text-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80')">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Quality Primary Education</h1>
+                <p class="lead">Modern learning environment in a rural heart.</p>
+            </div>
+        </div>
+
+
+<div class="hero-section text-center mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80'); padding: 120px 0;">
+    <div class="container" data-aos="fade-up">
+        <h1 class="display-3 fw-bold text-white">Digital Classrooms</h1>
+        <p class="lead text-white">Empowering students with multimedia and technology-driven learning.</p>
+    </div>
+</div>
+
+<div class="hero-section text-center mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80'); padding: 120px 0;">
+    <div class="container" data-aos="fade-up">
+        <h1 class="display-3 fw-bold text-white">Building Future Leaders</h1>
+        <p class="lead text-white">Nurturing discipline, sportsmanship, and academic excellence.</p>
+    </div>
+</div>
+    </header>
+
+    <!-- Admission Seaction -->
+<section class="py-5 bg-light my-3" id="admission">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h6 class="text-secondary fw-bold text-uppercase">Admissions 2026</h6>
+                <h2 class="fw-bold mb-4" style="color: var(--primary);">Join Our Learning Community</h2>
+                <p class="text-muted mb-4">Admissions are now open for the 2026 academic session at Beroil Govt. Primary School. We are committed to providing quality primary education and building a strong foundation for your child's future.</p>
+                
+                <div class="admission-steps mt-4">
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="step-num">1</div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-0">Collect Application Form</h6>
+                            <small class="text-muted">Available at the school administrative office during school hours.</small>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3 align-items-center">
+                        <div class="step-num">2</div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-0">Submit Documents</h6>
+                            <small class="text-muted">Attach Birth Certificate, Parent's NID, and passport-sized photos.</small>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4 align-items-center">
+                        <div class="step-num">3</div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-0">Confirm Admission</h6>
+                            <small class="text-muted">Complete the process after a brief student-teacher interaction.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <a href="admission.html" class="btn btn-success btn-lg rounded-pill px-4 shadow me-2">Apply Online</a>
+                    <a href="tel:+8801XXXXXXXXX" class="btn btn-outline-dark btn-lg rounded-pill px-4">Contact Office</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="zoom-in">
+                <div class="admission-img-wrapper position-relative">
+                    <div class="experience-badge shadow-lg">
+                        <span class="d-block h3 fw-bold mb-0">35+</span>
+                        <span class="small text-uppercase">Years of Excellence</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" 
+                         alt="School Admission" class="img-fluid rounded-4 shadow-lg border border-5 border-white">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Removed data-aos="fade-up" from the section to prevent container jump, applied to row instead -->
+    <section class="container">
+        <div class="row text-center g-4" data-aos="fade-up">
+            <div class="col-md-3">
+                <div class="counter-box">
+                    <h2 class="fw-bold">500+</h2>
+                    <p class="mb-0">Students</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="counter-box" style="background: var(--secondary)">
+                    <h2 class="fw-bold">15+</h2>
+                    <p class="mb-0">Teachers</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="counter-box">
+                    <h2 class="fw-bold">100%</h2>
+                    <p class="mb-0">Primary Pass</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="counter-box" style="background: var(--secondary)">
+                    <h2 class="fw-bold">12+</h2>
+                    <p class="mb-0">Classrooms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: DIGITAL NOTICE BOARD -->
+    <section class="bg-light">
+        <div class="container">
+            <!-- Added overflow-hidden to the row here specifically to clip AOS animations -->
+            <div class="row align-items-center overflow-hidden">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <h2 class="fw-bold text-success">Latest Updates</h2>
+                    <p>Stay informed with the recent announcements from the school administration.</p>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="notice-board shadow-sm mb-3">
+                        <span class="badge bg-danger">New</span>
+                        <h5 class="mt-2">Annual Sports Day 2026 Registration Started!</h5>
+                    </div>
+                    <div class="notice-board shadow-sm mb-3">
+                        <span class="badge bg-primary">Update</span>
+                        <h5 class="mt-2">New Digital Library Opening on February 1st.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Facilities -->
+
+    <section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our School Facilities</h2>
+            <div class="mx-auto bg-warning" style="height: 3px; width: 60px;"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="simple-card">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 mb-3" alt="Classroom">
+                    <h4>Digital Classroom</h4>
+                    <p class="text-white-50">Modern classrooms with multimedia support for better learning.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="simple-card">
+                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 mb-3" alt="Library">
+                    <h4>Reading Corner</h4>
+                    <p class="text-white-50">A quiet space for students to explore storybooks and gain knowledge.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="simple-card">
+                    <img src="https://i.pinimg.com/1200x/fb/dd/ba/fbddba800f4b10b4b6dc93a9a102ec25.jpg" class="img-fluid rounded-3 mb-3" alt="Playground">
+                    <h4>Play Area</h4>
+                    <p class="text-white-50">Large open playground for physical activities and daily assembly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SECTION 6: STUDENT OF THE MONTH (OWL CAROUSEL) -->
+    <section class="container">
+        <h2 class="text-center fw-bold mb-5">Our Shining Stars</h2>
+        <div class="owl-carousel owl-theme student-slider">
+            <div class="card p-3 border-0 shadow-sm m-2 text-center">
+                <img src="https://i.pinimg.com/736x/45/09/e7/4509e7cba4ec1f5cac4256ef33faf4c3.jpg" class="rounded-circle mx-auto mb-3" id="shiningStarImage">
+                <h5>Rakesh roy</h5>
+                <p class="text-muted">Class 5 (GPA 5.00)</p>
+            </div>
+            <div class="card p-3 border-0 shadow-sm m-2 text-center">
+                <img src="https://i.pinimg.com/736x/1e/6a/3a/1e6a3a9107ae15f456b1a614db1bf03d.jpg" class="rounded-circle mx-auto mb-3" id="shiningStarImage">
+                <h5>Siddik Islam</h5>
+                <p class="text-muted">Class 4 (Math Genius)</p>
+            </div>
+            <div class="card p-3 border-0 shadow-sm m-2 text-center">
+                <img src="https://i.pinimg.com/736x/44/82/2a/44822a718e0aa3847332e74396d46388.jpg" class="rounded-circle mx-auto mb-3" id="shiningStarImage">
+                <h5>Karima Yasmin</h5>
+                <p class="text-muted">Class 3 (Art Winner)</p>
+            </div>
+            <div class="card p-3 border-0 shadow-sm m-2 text-center">
+                <img src="https://i.pinimg.com/736x/f6/de/69/f6de696a8356720a3b83669ca9a1ad11.jpg" class="rounded-circle mx-auto mb-3" id="shiningStarImage">
+                <h5>Nirupa Rani</h5>
+                <p class="text-muted">Class 4 (Science Genius)</p>
+            </div>
+        </div>
+    </section>
+<!-- SECTION 7: Explore Our Campus -->
+<section class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-5">Explore Our Campus</h2>
+            <p class="text-muted">A glimpse into our world-class facilities and learning environment.</p>
+        </div>
+        
+        <div class="row g-3">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="tour-img-container">
+                    <img src="https://i.pinimg.com/1200x/ff/c5/10/ffc5109bdc4440bc1cd0428ba97cb65f.jpg" alt="University Library">
+                    <div class="image-overlay">
+                        <h5 class="mb-0">Modern Library</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8" data-aos="zoom-in" data-aos-delay="200">
+                <div class="tour-img-container">
+                    <img src="https://i.pinimg.com/1200x/c6/d8/d2/c6d8d200226944d63ef430b009189e28.jpg" alt="Campus Building">
+                    <div class="image-overlay">
+                        <h5 class="mb-0">Main Academic Block</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7" data-aos="zoom-in" data-aos-delay="300">
+                <div class="tour-img-container">
+                    <img src="https://i.pinimg.com/736x/44/48/15/444815ee28647e0d4acdfe3a1abeef7f.jpg" alt="Student Lounge">
+                    <div class="image-overlay">
+                        <h5 class="mb-0">Student Activity Center</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5" data-aos="zoom-in" data-aos-delay="400">
+                <div class="tour-img-container">
+                    <img src="https://i.pinimg.com/736x/66/14/3b/66143b52f51e99c1b535e3a67340e5a2.jpg" alt="Research Lab">
+                    <div class="image-overlay">
+                        <h5 class="mb-0">High-Tech Labs</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 8: FAQ -->
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5" data-aos="zoom-in">
+                    <h2 class="fw-bold">Frequently Asked Questions</h2>
+                    <p class="text-muted">Common queries for parents and students.</p>
+                </div>
+
+                <div class="accordion shadow-sm" id="faqAccordion" data-aos="fade-up">
+                    <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <i class="fas fa-user-plus me-2 text-primary"></i> When does admission start?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Admission forms are usually distributed in the last week of December. Classes for the new session begin on January 1st.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <i class="fas fa-tshirt me-2 text-primary"></i> What is the school uniform policy?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Boys: White shirt and Navy Blue trousers. Girls: Navy Blue frock with White salwar and orna. White shoes are mandatory for all.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <i class="fas fa-clock me-2 text-primary"></i> What are the school timings?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Morning Shift (Pre-primary - Class 2): 9:00 AM - 12:00 PM.<br>
+                                Day Shift (Class 3 - Class 5): 12:15 PM - 4:15 PM.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Beroil GPS</h5>
+                    <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Find Us</h5>
+                    <p><i class="fas fa-map-marker-alt"> </i>  Berail, Jamalpur, Joypurhat</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ 
+            duration: 1000,
+            once: true, // Animation only happens once (prevents glitching on scroll up)
+            mirror: false 
+        });
+
+        $(".main-slider").owlCarousel({ 
+            items: 1, 
+            loop: true, 
+            autoplay: true,
+            autoplayTimeout: 5000,
+            animateOut: 'fadeOut'
+        });
+
+        $(".student-slider").owlCarousel({ 
+            margin: 20, 
+            loop: true,
+            autoplay: true,
+            responsive: {0:{items:1}, 768:{items:2}, 1000:{items:3}} 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভর্তি ফরম | Beroil Government Primary School</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #198754;
+            --secondary-color: #0d6efd;
+            --bkash-color: #e2136e;
+            --dark-bg: #212529;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-section {
+            background: linear-gradient(45deg, #198754, #20c997);
+            padding: 120px 0 100px;
+            color: white;
+            text-align: center;
+            border-radius: 0 0 50% 50% / 10%;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: -70px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Custom Upload Card */
+        .upload-card {
+            background: #f8fffb;
+            border: 1px dashed #198754;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .upload-card:hover {
+            background: #f0fdf4;
+        }
+
+        /* Payment Card */
+        .payment-card {
+            background: #fff0f6;
+            border: 1px dashed var(--bkash-color);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .btn-bkash {
+            background-color: var(--bkash-color);
+            color: white;
+            font-weight: 600;
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: none;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-bkash:hover {
+            background-color: #bc115b;
+            color: white;
+        }
+
+        .btn-submit {
+            background: linear-gradient(45deg, #198754, #28a745);
+            border: none;
+            padding: 15px 40px;
+            font-weight: 600;
+            border-radius: 50px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(25, 135, 84, 0.2);
+        }
+
+        footer {
+            background: var(--dark-bg);
+            color: #ddd;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+    </style>
+    <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top  bg-white shadow-sm" id="navbar">
+        <div class="container">
+            <!-- LOGO ONLY -->
+            <a class="navbar-brand p-0" href="index.html">
+                <img src="images/bgps_logo.png" 
+                      alt="BGPS Logo" style="height: 80px; width: 80px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <header class="header-section">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-5 fw-bold mb-2">অনলাইন ভর্তি আবেদন</h1>
+            <p class="lead">বেরইল সরকারি প্রাথমিক বিদ্যালয়</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="form-container" data-aos="fade-up">
+                    <form action="https://formsubmit.co/subrotatrust@gmail.com" method="POST"
+                        enctype="multipart/form-data">
+
+                        <!-- শিক্ষার্থীর তথ্য -->
+                        <div class="section-title"><i class="fas fa-user-graduate"></i> শিক্ষার্থীর তথ্য</div>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <label class="form-label">শিক্ষার্থীর পূর্ণ নাম</label>
+                                <input type="text" name="Student_Name" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">জন্ম তারিখ</label>
+                                <input type="date" name="DOB" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">ভর্তির শ্রেণি</label>
+                                <select name="Admission_Class" class="form-select form-control" required>
+                                    <option value="" selected disabled>শ্রেণি নির্বাচন করুন</option>
+                                    <option>শিশু শ্রেণি</option>
+                                    <option>প্রথম শ্রেণি</option>
+                                    <option>দ্বিতীয় শ্রেণি</option>
+                                    <option>তৃতীয় শ্রেণি</option>
+                                    <option>চতুর্থ শ্রেণি</option>
+                                    <option>পঞ্চম শ্রেণি</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="section-title"><i class="fas fa-user"></i><i class="fas fa-user"></i> পিতা মাতার তথ্য</div>
+
+                        <div class="row mt-2 g-3">
+                            <div class="col-md-12">
+                                <label class="form-label"> পিতার পূর্ণ নাম</label>
+                                <input type="text" name="Father_Name" class="form-control" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label"> মাতার পূর্ণ নাম</label>
+                                <input type="text" name="Mother_Name" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <!-- নথিপত্র এবং ছবি -->
+                        <div class="section-title"><i class="fas fa-file-upload"></i> নথিপত্র ও ছবি</div>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="upload-card">
+                                    <label class="fw-bold small mb-2">জন্ম নিবন্ধনের কপি</label>
+                                    <input type="file" name="Birth_Certificate" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="upload-card">
+                                    <label class="fw-bold small mb-2">অভিভাবকের NID</label>
+                                    <input type="file" name="Guardian_NID" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="upload-card shadow-sm border-success">
+                                    <label class="fw-bold small mb-2 text-dark">শিক্ষার্থীর ছবি</label>
+                                    <input type="file" name="Student_Image" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- বর্তমান ঠিকানা -->
+                        <div class="mt-4">
+                            <label class="form-label fw-bold">বর্তমান ঠিকানা</label>
+                            <textarea name="Address" class="form-control" rows="2" required></textarea>
+                        </div>
+
+                        <!-- পেমেন্ট সেকশন -->
+                        <div class="section-title"><i class="fas fa-wallet"></i> আবেদন ফি</div>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <div class="payment-card shadow-sm">
+                                    <p class="mb-2 fw-bold text-danger">অনলাইনে আবেদন ফি জমা দিন</p>
+                                    <button type="button" class="btn btn-bkash" data-bs-toggle="modal"
+                                        data-bs-target="#paymentModal">
+                                        <i class="fas fa-money-bill-wave me-2"></i> টাকা জমা দিন (bKash QR)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="form-label fw-bold">Transaction ID (টাকা পাঠানোর পর লিখুন)</label>
+                            <input type="text" name="TrxID" class="form-control border-danger"
+                                placeholder="Ex: 8N77X8KLS" required>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-submit btn-lg">আবেদন জমা দিন</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bKash Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">বিকাশ পেমেন্ট QR</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <p class="small text-muted mb-3">নিচের QR কোডটি আপনার বিকাশ অ্যাপ থেকে স্ক্যান করুন</p>
+                    <img src="images/bKash.jpg" class="img-fluid rounded border mb-3"
+                        style="height: 356px; width: 306px;" alt="QR Code">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">বন্ধ করুন</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Beroil GPS</h5>
+                    <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Find Us</h5>
+                    <p><i class="fas fa-map-marker-alt"> </i>  Berail, Jamalpur, Joypurhat</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle (শুধু একবার শেষে রাখবেন) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+
+</html>

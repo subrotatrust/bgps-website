@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Beroil Govt. Primary School</title>
+    <!-- CSS CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #006837;
+            --secondary: #f15a24;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+
+
+              /* Header */
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951249.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+        /* Event Cards */
+        .event-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            margin-bottom: 30px;
+            background: #fff;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .event-img-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .event-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Date Badge */
+        .date-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .date-badge span {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .event-body {
+            padding: 25px;
+        }
+
+        .event-category {
+            color: var(--secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .event-title {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .event-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .event-meta i {
+            color: var(--primary);
+            margin-right: 8px;
+            width: 15px;
+        }
+
+        /* Gallery Section */
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 104, 55, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 60px 0 30px;
+        }
+    </style>
+    <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+  
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top  bg-white shadow-sm" id="navbar">
+        <div class="container">
+            <!-- LOGO ONLY -->
+            <a class="navbar-brand p-0" href="index.html">
+                <img src="images/bgps_logo.png" 
+                      alt="BGPS Logo" style="height: 80px; width: 80px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER - Simplified -->
+<header class="page-header">
+        <div class="container header-content" data-aos="zoom-out">
+            <h1 class="fw-bold">Our School Events</h1>
+            <p class="lead mt-3">Discover the vibrant celebrations, academic meets, and cultural activities at Beroil Govt. Primary School.</p>
+        </div>
+    </header>
+
+    <!-- UPCOMING EVENTS -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h6 class="text-secondary fw-bold text-uppercase">Calendar</h6>
+                    <h2 class="fw-bold" style="color: var(--primary);">Upcoming Events</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Event 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="event-card">
+                        <div class="event-img-container">
+                            <div class="date-badge">26 <span>MAR</span></div>
+                            <img src="images/For Any Custom Work don't hesitate to get in touch….jpg" class="event-img"
+                                alt="Independence Day">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-category">National Day</span>
+                            <h4 class="event-title">Independence Day Celebration</h4>
+                            <div class="event-meta"><i class="fas fa-clock"></i> 09:00 AM - 12:30 PM</div>
+                            <div class="event-meta"><i class="fas fa-map-marker-alt"></i> School Assembly Ground</div>
+                            <p class="text-muted mt-3 small">A day of patriotism featuring flag hoisting, cultural
+                                performances, and patriotic songs by students.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <div class="event-img-container">
+                            <div class="date-badge">14 <span>APR</span></div>
+                            <img src="images/Bengali New Year, Pohela Boishakh celebration….jpg" event-img"
+                                alt="Boishakh">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-category">Cultural</span>
+                            <h4 class="event-title">Pohela Boishakh Fair</h4>
+                            <div class="event-meta"><i class="fas fa-clock"></i> 10:00 AM - 04:00 PM</div>
+                            <div class="event-meta"><i class="fas fa-map-marker-alt"></i> School Campus</div>
+                            <p class="text-muted mt-3 small">Celebrating the Bengali New Year with traditional food
+                                stalls, crafts, and folk dance competitions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <div class="event-img-container">
+                            <div class="date-badge">20 <span>MAY</span></div>
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80"
+                                class="event-img" alt="Sports Day">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-category">Sports</span>
+                            <h4 class="event-title">Annual Sports Meet</h4>
+                            <div class="event-meta"><i class="fas fa-clock"></i> 08:30 AM - 02:00 PM</div>
+                            <div class="event-meta"><i class="fas fa-map-marker-alt"></i> Local Stadium</div>
+                            <p class="text-muted mt-3 small">Annual athletic competitions, relay races, and award
+                                ceremony for our young athletes.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="event-card">
+                        <div class="event-img-container">
+                            <div class="date-badge">16 <span>DEC</span></div>
+                            <img src="images/bangladesh-victory-day-16-december-illustration-free-vector.jpg" class="event-img" alt="Victory Day Bangladesh">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-category">National Day</span>
+                            <h4 class="event-title">Bijoy Dibosh (Victory Day)</h4>
+                            <div class="event-meta"><i class="fas fa-clock"></i> 08:00 AM - 12:00 PM</div>
+                            <div class="event-meta"><i class="fas fa-map-marker-alt"></i> School Stadium Ground</div>
+                            <p class="text-muted mt-3 small">Celebrating our glorious victory of 1971 with deep respect,
+                                flag-hoisting ceremonies, and tribute to our martyrs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="event-card">
+                        <div class="event-img-container">
+                            <div class="date-badge">21 <span>FEB</span></div>
+                            <img src="images/happy-international-mother-language-day-21-february-bangladesh_502601-758.avif" class="event-img"
+                                alt="International Mother Language Day">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-category">International Day</span>
+                            <h4 class="event-title">International Mother Language Day</h4>
+                            <div class="event-meta"><i class="fas fa-clock"></i> 07:30 AM - 11:00 AM</div>
+                            <div class="event-meta"><i class="fas fa-map-marker-alt"></i> Shaheed Minar Premises</div>
+                            <p class="text-muted mt-3 small">Honoring the language martyrs through "Probhat Pheri",
+                                floral wreath offering, and cultural programs reflecting our heritage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAST HIGHLIGHTS GALLERY -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" style="color: var(--primary);">Past Highlights</h2>
+                <p class="text-muted">Memories from our previous successful events.</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=600&q=80"
+                            alt="Prize giving">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus text-white fa-2x"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1503945438517-f65904a52ce6?auto=format&fit=crop&w=600&q=80"
+                            alt="Classroom activity">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus text-white fa-2x"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80"
+                            alt="Students laughing">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus text-white fa-2x"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-success px-4 py-2 rounded-pill">View All Photos</button>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Beroil GPS</h5>
+                    <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Find Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Berail, Jamalpur, Joypurhat</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+
+</html>
+```
