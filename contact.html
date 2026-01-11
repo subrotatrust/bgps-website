@@ -36,7 +36,7 @@
         /* Page Header Style */
         .page-header { 
             /* Using a placeholder image - replace with 'images/contact.png' if you have it */
-            background: linear-gradient(rgba(0,104,55,0.9), rgba(0,104,55,0.9)), url('images/contact.png'); 
+            background: linear-gradient(rgba(0,104,55,0.4), rgba(0,104,55,0.6)), url('https://i.pinimg.com/736x/eb/24/b9/eb24b91c97f40e4ab8c180ee9f4cab9c.jpg'); 
             background-size: cover; 
             background-position: center;
             padding: 100px 0; 
@@ -93,6 +93,33 @@
             overflow: hidden;
             box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
         }
+
+        
+    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+::-webkit-scrollbar {
+    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
+    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+}
+
+/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
+}
+
+/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+::-webkit-scrollbar-thumb:hover {
+    background: #4ab684; 
+}
+
+
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
 </head>
@@ -108,17 +135,17 @@
                       alt="BGPS Logo" style="height: 80px; width: 80px;">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+         <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars-staggered"></i>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-success active" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
                
                 </ul>
@@ -144,7 +171,7 @@
                     <div class="contact-info-card text-center">
                         <div class="info-icon mx-auto"><i class="fas fa-map-marker-alt"></i></div>
                         <h5>Our Location</h5>
-                        <p class="text-muted">Village: Beroil, P.O: Beroil Market,<br> Magura, Bangladesh</p>
+                        <p class="text-muted">Village: Beroil, Jamalpur,Joypurhat<br> Rajshahi, Bangladesh</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
@@ -164,6 +191,7 @@
             </div>
 
             <!-- Form and Map Row -->
+
             <!-- FIX 4: Added overflow-hidden to row to prevent animation spill-over -->
             <div class="row g-5 overflow-hidden">
                 
@@ -171,23 +199,23 @@
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
                     <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm h-100">
                         <h3 class="fw-bold mb-4 text-success">Send us a Message</h3>
-                        <form action="#" method="POST"> <!-- Added method structure -->
+                        <form action="https://formsubmit.co/subrotatrust@gmail.com" method="POST"> <!-- Added method structure -->
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Your Name</label>
-                                    <input type="text" class="form-control form-control-lg bg-light" placeholder="Enter name" required>
+                                    <input type="text" class="form-control form-control-lg bg-light" name="name" placeholder="Enter name" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Email Address</label>
-                                    <input type="email" class="form-control form-control-lg bg-light" placeholder="Enter email" required>
+                                    <input type="email" class="form-control form-control-lg bg-light" name="email" placeholder="Enter email" required>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label fw-bold">Subject</label>
-                                    <input type="text" class="form-control form-control-lg bg-light" placeholder="What is this about?">
+                                    <input type="text" class="form-control form-control-lg bg-light" name="subject" placeholder="What is this about?">
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label fw-bold">Message</label>
-                                    <textarea class="form-control form-control-lg bg-light" rows="5" placeholder="Your message here..." required></textarea>
+                                    <textarea class="form-control form-control-lg bg-light" name="message" rows="5" placeholder="Your message here..." required></textarea>
                                 </div>
                                 <div class="col-12 mt-4">
                                     <button type="submit" class="btn btn-primary btn-lg w-100 shadow-sm">
@@ -218,10 +246,10 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-md-4">
-                    <h5 class="text-success fw-bold">Beroil GPS</h5>
+                    <h5 class="text-white fw-bold">Beroil GPS</h5>
                     <p class="text-secondary small">Cultivating knowledge, discipline, and ethics in the hearts of our future leaders since 1970.</p>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center  d-md-block d-none">
                     <h5 class="text-white">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none hover-white">About Us</a></li>

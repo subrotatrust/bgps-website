@@ -133,6 +133,62 @@
             padding: 60px 0 30px;
             margin-top: 80px;
         }
+
+            /* বাড়তি সুন্দর্যের জন্য কিছু কাস্টম CSS */
+    .google-form-wrapper {
+        background-color: #fff;
+        line-height: 0; /* আইফ্রেমের নিচের বাড়তি গ্যাপ দূর করার জন্য */
+    }
+    .card {
+        border-left: 5px solid #0d6efd !important; /* বাম পাশে একটি নীল বর্ডার */
+    }
+    iframe {
+        border: none;
+        vertical-align: bottom;
+    }
+
+      .google-form-wrapper {
+        line-height: 0;
+    }
+    iframe {
+        border: none;
+        vertical-align: bottom;
+    }
+    .alert-primary {
+        background-color: #e7f1ff;
+        color: #0d6efd;
+        font-size: 0.95rem;
+    }
+    /* ছোট ডিভাইসের জন্য মার্জিন অ্যাডজাস্টমেন্ট */
+    @media (max-width: 768px) {
+        .card-body { padding: 1.5rem; }
+    }
+    
+    
+    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+::-webkit-scrollbar {
+    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
+    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+}
+
+/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
+}
+
+/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+::-webkit-scrollbar-thumb:hover {
+    background: #4ab684; 
+}
+
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
 
@@ -149,154 +205,96 @@
                       alt="BGPS Logo" style="height: 80px; width: 80px;">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars-staggered"></i>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link active text-success" href="admission.html">Admission</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     
 
-    <header class="header-section">
-        <div class="container" data-aos="zoom-in">
-            <h1 class="display-5 fw-bold mb-2">অনলাইন ভর্তি আবেদন</h1>
-            <p class="lead">বেরইল সরকারি প্রাথমিক বিদ্যালয়</p>
-        </div>
-    </header>
+ <!-- payment section  -->
+<!-- Bootstrap Icons CDN (If not already included in your project) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <div class="container mb-5">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<section class="py-4 bg-light">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <div class="form-container" data-aos="fade-up">
-                    <form action="https://formsubmit.co/subrotatrust@gmail.com" method="POST"
-                        enctype="multipart/form-data">
-
-                        <!-- শিক্ষার্থীর তথ্য -->
-                        <div class="section-title"><i class="fas fa-user-graduate"></i> শিক্ষার্থীর তথ্য</div>
+                
+                <!-- স্কুল হেডার ও কার্ড ডিজাইন -->
+                <div class="card border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 text-center">
+                        <h2 class="fw-bold text-primary mb-1">বেড়ইল সরকারি প্রাথমিক বিদ্যালয়</h2>
+                        <p class="text-muted">অনলাইন ফর্ম পূরণ নির্দেশনা</p>
+                    </div>
+                    
+                    <div class="card-body p-4 pt-2">
+                        <!-- সতর্কতা বক্স -->
                         <div class="row g-3">
-                            <div class="col-md-12">
-                                <label class="form-label">শিক্ষার্থীর পূর্ণ নাম</label>
-                                <input type="text" name="Student_Name" class="form-control" required>
+                            <div class="col-md-6">
+                                <div class="p-3 border-start border-danger border-4 rounded-3 bg-white shadow-sm h-100">
+                                    <h6 class="fw-bold text-danger"><i class="bi bi-exclamation-octagon-fill me-2"></i>সতর্কতা ও নির্দেশনা</h6>
+                                    <p class="small mb-0 text-dark">পেমেন্ট সম্পন্ন করার পর সঠিকভাবে আপনার <strong>TRX ID</strong> ইনপুট দিন এবং সতর্কতার সাথে ফর্মটি পূরণ করুন।</p>
+                                    <p class="small mb-0 text-dark">  <strong>>> ভর্তি ফি ৩০০ টাকা</strong> </p>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">জন্ম তারিখ</label>
-                                <input type="date" name="DOB" class="form-control" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">ভর্তির শ্রেণি</label>
-                                <select name="Admission_Class" class="form-select form-control" required>
-                                    <option value="" selected disabled>শ্রেণি নির্বাচন করুন</option>
-                                    <option>শিশু শ্রেণি</option>
-                                    <option>প্রথম শ্রেণি</option>
-                                    <option>দ্বিতীয় শ্রেণি</option>
-                                    <option>তৃতীয় শ্রেণি</option>
-                                    <option>চতুর্থ শ্রেণি</option>
-                                    <option>পঞ্চম শ্রেণি</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="section-title"><i class="fas fa-user"></i><i class="fas fa-user"></i> পিতা মাতার তথ্য</div>
-
-                        <div class="row mt-2 g-3">
-                            <div class="col-md-12">
-                                <label class="form-label"> পিতার পূর্ণ নাম</label>
-                                <input type="text" name="Father_Name" class="form-control" required>
-                            </div>
-                            <div class="col-md-12">
-                                <label class="form-label"> মাতার পূর্ণ নাম</label>
-                                <input type="text" name="Mother_Name" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <!-- নথিপত্র এবং ছবি -->
-                        <div class="section-title"><i class="fas fa-file-upload"></i> নথিপত্র ও ছবি</div>
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="upload-card">
-                                    <label class="fw-bold small mb-2">জন্ম নিবন্ধনের কপি</label>
-                                    <input type="file" name="Birth_Certificate" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="upload-card">
-                                    <label class="fw-bold small mb-2">অভিভাবকের NID</label>
-                                    <input type="file" name="Guardian_NID" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="upload-card shadow-sm border-success">
-                                    <label class="fw-bold small mb-2 text-dark">শিক্ষার্থীর ছবি</label>
-                                    <input type="file" name="Student_Image" class="form-control" required>
+                                <div class="p-3 border-start border-info border-4 rounded-3 bg-white shadow-sm h-100">
+                                    <h6 class="fw-bold text-info"><i class="bi bi-info-circle-fill me-2"></i>সহায়তা</h6>
+                                    <a target="_blank" href="https://youtu.be/op7-Pdj1qns?si=QNViMd3VFyFQXow8" class="small text-decoration-none d-block text-dark">TRX ID সম্পর্কে বিস্তারিত জানতে এখানে <span style="color: blue;">ক্লিক</span> করুন <i class="bi bi-arrow-right-short"></i></a>
                                 </div>
                             </div>
                         </div>
 
-
-                        <!-- বর্তমান ঠিকানা -->
-                        <div class="mt-4">
-                            <label class="form-label fw-bold">বর্তমান ঠিকানা</label>
-                            <textarea name="Address" class="form-control" rows="2" required></textarea>
-                        </div>
-
-                        <!-- পেমেন্ট সেকশন -->
-                        <div class="section-title"><i class="fas fa-wallet"></i> আবেদন ফি</div>
-                        <div class="row g-3">
-                            <div class="col-md-12">
-                                <div class="payment-card shadow-sm">
-                                    <p class="mb-2 fw-bold text-danger">অনলাইনে আবেদন ফি জমা দিন</p>
-                                    <button type="button" class="btn btn-bkash" data-bs-toggle="modal"
-                                        data-bs-target="#paymentModal">
-                                        <i class="fas fa-money-bill-wave me-2"></i> টাকা জমা দিন (bKash QR)
-                                    </button>
-                                </div>
+                        <div class="mt-4 text-center">
+                            <div class="alert alert-primary border-0 rounded-pill py-2 shadow-sm d-inline-block px-4">
+                                <i class="bi bi-cursor-fill me-2"></i>
+                                নিচে থাকা <strong>"Fill Out Form"</strong> নীল বাটনে ক্লিক করুন ফর্ম ফিলাপ করার জন্য
                             </div>
                         </div>
-
-                        <div class="mt-4">
-                            <label class="form-label fw-bold">Transaction ID (টাকা পাঠানোর পর লিখুন)</label>
-                            <input type="text" name="TrxID" class="form-control border-danger"
-                                placeholder="Ex: 8N77X8KLS" required>
-                        </div>
-
-                        <div class="text-center mt-5">
-                            <button type="submit" class="btn btn-submit btn-lg">আবেদন জমা দিন</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
+
+                <!-- গুগল ফর্ম সরাসরি লোড -->
+                <div class="google-form-wrapper shadow-lg rounded-4 overflow-hidden border py-2">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSemJLYQj5LopmlR6NuVDSORt6MyWuuWFHj-hD7t4_QYwHr4kQ/viewform?embedded=true" 
+                        width="100%" 
+                        height="280" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        style="display: block;">
+                        Loading…
+                    </iframe>
+                </div>
+                
+                <div class="text-center mt-3">
+                    <p class="small text-muted">ফর্ম দেখতে সমস্যা হচ্ছে? 
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSemJLYQj5LopmlR6NuVDSORt6MyWuuWFHj-hD7t4_QYwHr4kQ/viewform" target="_blank" class="fw-bold text-decoration-none">নতুন ট্যাবে ওপেন করুন</a>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
+</section>
 
-    <!-- bKash Modal -->
-    <div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0">
-                <div class="modal-header bg-danger text-white">
-                    <h5 class="modal-title">বিকাশ পেমেন্ট QR</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body text-center p-4">
-                    <p class="small text-muted mb-3">নিচের QR কোডটি আপনার বিকাশ অ্যাপ থেকে স্ক্যান করুন</p>
-                    <img src="images/bKash.jpg" class="img-fluid rounded border mb-3"
-                        style="height: 356px; width: 306px;" alt="QR Code">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">বন্ধ করুন</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -305,8 +303,8 @@
                     <h5>Beroil GPS</h5>
                     <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
                 </div>
-                <div class="col-md-4 text-center">
-                    <h5>Links</h5>
+                <div class="col-md-4 text-center  d-md-block d-none">
+                    <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
                         <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>

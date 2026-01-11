@@ -126,6 +126,32 @@
             color: white;
             padding: 60px 0 30px;
         }
+        
+    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+::-webkit-scrollbar {
+    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
+    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+}
+
+/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
+}
+
+/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+::-webkit-scrollbar-thumb:hover {
+    background: #4ab684; 
+}
+
+
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
 </head>
@@ -142,15 +168,15 @@
                      alt="BGPS Logo" style="height: 80px; width: 80px;">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+             <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars-staggered"></i>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link text-success active" href="academics.html">Academics</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
@@ -330,8 +356,8 @@
                     <h5>Beroil GPS</h5>
                     <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
                 </div>
-                <div class="col-md-4 text-center">
-                    <h5>Links</h5>
+                <div class="col-md-4 text-center  d-md-block d-none">
+                    <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
                         <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>

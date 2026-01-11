@@ -81,6 +81,31 @@
         width: 122px;
     }
     
+
+    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+::-webkit-scrollbar {
+    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
+    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+}
+
+/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
+}
+
+/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+::-webkit-scrollbar-thumb:hover {
+    background: #4ab684; 
+}
+
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
 </head>
@@ -95,13 +120,13 @@
                       alt="BGPS Logo" style="height: 80px; width: 80px;">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars-staggered"></i>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-success fw-bold active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
@@ -122,7 +147,7 @@
             </div>
         </div>
 
-        <div class="hero-section text-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80')">
+        <div class="hero-section text-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co.com/gLprGGVL/IMG-20260111-104439.jpg')">
             <div class="container">
                 <h1 class="display-3 fw-bold">Quality Primary Education</h1>
                 <p class="lead">Modern learning environment in a rural heart.</p>
@@ -137,7 +162,7 @@
     </div>
 </div>
 
-<div class="hero-section text-center mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80'); padding: 120px 0;">
+<div class="hero-section text-center mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co.com/LhQHQMvk/IMG-20260111-104532.jpg'); padding: 120px 0;">
     <div class="container" data-aos="fade-up">
         <h1 class="display-3 fw-bold text-white">Building Future Leaders</h1>
         <p class="lead text-white">Nurturing discipline, sportsmanship, and academic excellence.</p>
@@ -179,8 +204,8 @@
                 </div>
 
                 <div class="mt-4">
-                    <a href="admission.html" class="btn btn-success btn-lg rounded-pill px-4 shadow me-2">Apply Online</a>
-                    <a href="tel:+8801XXXXXXXXX" class="btn btn-outline-dark btn-lg rounded-pill px-4">Contact Office</a>
+                    <a href="admission.html" class="btn btn-success btn-lg rounded-pill px-4 shadow me-2 my-3">Apply Online</a>
+                    <a href="tel:+8801XXXXXXXXX" class="btn btn-outline-dark btn-lg rounded-pill px-4 my-3">Contact Office</a>
                 </div>
             </div>
 
@@ -271,7 +296,7 @@
 
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="simple-card">
-                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 mb-3" alt="Library">
+                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 mb-3"  alt="Library">
                     <h4>Reading Corner</h4>
                     <p class="text-white-50">A quiet space for students to explore storybooks and gain knowledge.</p>
                 </div>
@@ -279,7 +304,7 @@
 
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="simple-card">
-                    <img src="https://i.pinimg.com/1200x/fb/dd/ba/fbddba800f4b10b4b6dc93a9a102ec25.jpg" class="img-fluid rounded-3 mb-3" alt="Playground">
+                    <img src="https://i.pinimg.com/1200x/fb/dd/ba/fbddba800f4b10b4b6dc93a9a102ec25.jpg" style="height: 220px; width: 100%;" class="img-fluid rounded-3 mb-3" alt="Playground">
                     <h4>Play Area</h4>
                     <p class="text-white-50">Large open playground for physical activities and daily assembly.</p>
                 </div>
@@ -318,43 +343,43 @@
 <section class="bg-dark text-white py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold display-5">Explore Our Campus</h2>
+            <h2 class="fw-bold display-5">Explore Our Students </h2>
             <p class="text-muted">A glimpse into our world-class facilities and learning environment.</p>
         </div>
         
         <div class="row g-3">
             <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                 <div class="tour-img-container">
-                    <img src="https://i.pinimg.com/1200x/ff/c5/10/ffc5109bdc4440bc1cd0428ba97cb65f.jpg" alt="University Library">
+                    <img src="https://i.ibb.co.com/YFKFCKnN/IMG-20260111-104222.jpg" alt="University Library">
                     <div class="image-overlay">
-                        <h5 class="mb-0">Modern Library</h5>
+                        <h5 class="mb-0">Class Four Boys</h5>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-8" data-aos="zoom-in" data-aos-delay="200">
                 <div class="tour-img-container">
-                    <img src="https://i.pinimg.com/1200x/c6/d8/d2/c6d8d200226944d63ef430b009189e28.jpg" alt="Campus Building">
+                    <img src="https://i.ibb.co.com/2fZ2GHC/IMG-20260111-104244.jpg" alt="Campus Building">
                     <div class="image-overlay">
-                        <h5 class="mb-0">Main Academic Block</h5>
+                        <h5 class="mb-0">Class Four Girls</h5>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-7" data-aos="zoom-in" data-aos-delay="300">
                 <div class="tour-img-container">
-                    <img src="https://i.pinimg.com/736x/44/48/15/444815ee28647e0d4acdfe3a1abeef7f.jpg" alt="Student Lounge">
+                    <img src="https://i.ibb.co.com/7Pks27G/IMG-20260111-104254.jpg" alt="Student Lounge">
                     <div class="image-overlay">
-                        <h5 class="mb-0">Student Activity Center</h5>
+                        <h5 class="mb-0">Student Study Activity</h5>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-5" data-aos="zoom-in" data-aos-delay="400">
                 <div class="tour-img-container">
-                    <img src="https://i.pinimg.com/736x/66/14/3b/66143b52f51e99c1b535e3a67340e5a2.jpg" alt="Research Lab">
+                    <img src="https://i.ibb.co.com/xSj1Ky3G/IMG-20260111-104238-2.jpg" alt="Research Lab">
                     <div class="image-overlay">
-                        <h5 class="mb-0">High-Tech Labs</h5>
+                        <h5 class="mb-0">Class Three Students</h5>
                     </div>
                 </div>
             </div>
@@ -424,8 +449,8 @@
                     <h5>Beroil GPS</h5>
                     <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
                 </div>
-                <div class="col-md-4 text-center">
-                    <h5>Links</h5>
+                <div class="col-md-4 text-center d-md-block d-none">
+                    <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
                         <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
