@@ -30,12 +30,6 @@
             overflow-x: hidden;
         }
 
-        .navbar {
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-        }
-
         .header-section {
             background: linear-gradient(45deg, #198754, #20c997);
             padding: 120px 0 100px;
@@ -134,61 +128,73 @@
             margin-top: 80px;
         }
 
-            /* বাড়তি সুন্দর্যের জন্য কিছু কাস্টম CSS */
-    .google-form-wrapper {
-        background-color: #fff;
-        line-height: 0; /* আইফ্রেমের নিচের বাড়তি গ্যাপ দূর করার জন্য */
-    }
-    .card {
-        border-left: 5px solid #0d6efd !important; /* বাম পাশে একটি নীল বর্ডার */
-    }
-    iframe {
-        border: none;
-        vertical-align: bottom;
-    }
+        /* বাড়তি সুন্দর্যের জন্য কিছু কাস্টম CSS */
+        .google-form-wrapper {
+            background-color: #fff;
+            line-height: 0;
+            /* আইফ্রেমের নিচের বাড়তি গ্যাপ দূর করার জন্য */
+        }
 
-      .google-form-wrapper {
-        line-height: 0;
-    }
-    iframe {
-        border: none;
-        vertical-align: bottom;
-    }
-    .alert-primary {
-        background-color: #e7f1ff;
-        color: #0d6efd;
-        font-size: 0.95rem;
-    }
-    /* ছোট ডিভাইসের জন্য মার্জিন অ্যাডজাস্টমেন্ট */
-    @media (max-width: 768px) {
-        .card-body { padding: 1.5rem; }
-    }
-    
-    
-    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
-::-webkit-scrollbar {
-    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
-    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
-}
+        .card {
+            border-left: 5px solid #0d6efd !important;
+            /* বাম পাশে একটি নীল বর্ডার */
+        }
 
-/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px;
-}
+        iframe {
+            border: none;
+            vertical-align: bottom;
+        }
 
-/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
-    border-radius: 10px;
-    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
-}
+        .google-form-wrapper {
+            line-height: 0;
+        }
 
-/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
-::-webkit-scrollbar-thumb:hover {
-    background: #4ab684; 
-}
+        iframe {
+            border: none;
+            vertical-align: bottom;
+        }
 
+        .alert-primary {
+            background-color: #e7f1ff;
+            color: #0d6efd;
+            font-size: 0.95rem;
+        }
+
+        /* ছোট ডিভাইসের জন্য মার্জিন অ্যাডজাস্টমেন্ট */
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1.5rem;
+            }
+        }
+
+
+        /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* লম্বালম্বি স্ক্রলবারের জন্য */
+            height: 10px;
+            /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+        }
+
+        /* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        /* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #06787c, #218838);
+            /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+            /* থাম্ব এর চারপাশে বর্ডার */
+        }
+
+        /* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4ab684;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
 
@@ -196,103 +202,84 @@
 
 <body>
 
-<!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-white shadow-sm" id="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top  bg-dark py-4 shadow-sm" id="navbar">
         <div class="container">
             <!-- LOGO ONLY -->
-            <a class="navbar-brand p-0" href="index.html">
-                <img src="images/bgps_logo.png" 
-                      alt="BGPS Logo" style="height: 80px; width: 80px;">
+            <a class="navbar-brand p-0  d-lg-none d-md-block" href="index.html">
+                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 80px; width: 80px;">
             </a>
 
-      <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link active text-success" href="admission.html">Admission</a></li>
+                <ul class="navbar-nav mx-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active text-success" href="admission.html">Admission</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    
 
- <!-- payment section  -->
-<!-- Bootstrap Icons CDN (If not already included in your project) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- payment section  -->
+    <!-- Bootstrap Icons CDN (If not already included in your project) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-<section class="py-4 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                
-                <!-- স্কুল হেডার ও কার্ড ডিজাইন -->
-                <div class="card border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
-                    <div class="card-header bg-white border-0 pt-4 pb-0 text-center">
-                        <h2 class="fw-bold text-primary mb-1">বেড়ইল সরকারি প্রাথমিক বিদ্যালয়</h2>
-                        <p class="text-muted">অনলাইন ফর্ম পূরণ নির্দেশনা</p>
-                    </div>
-                    
-                    <div class="card-body p-4 pt-2">
-                        <!-- সতর্কতা বক্স -->
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="p-3 border-start border-danger border-4 rounded-3 bg-white shadow-sm h-100">
-                                    <h6 class="fw-bold text-danger"><i class="bi bi-exclamation-octagon-fill me-2"></i>সতর্কতা ও নির্দেশনা</h6>
-                                    <p class="small mb-0 text-dark">পেমেন্ট সম্পন্ন করার পর সঠিকভাবে আপনার <strong>TRX ID</strong> ইনপুট দিন এবং সতর্কতার সাথে ফর্মটি পূরণ করুন।</p>
-                                    <p class="small mb-0 text-dark">  <strong>>> ভর্তি ফি ৩০০ টাকা</strong> </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-3 border-start border-info border-4 rounded-3 bg-white shadow-sm h-100">
-                                    <h6 class="fw-bold text-info"><i class="bi bi-info-circle-fill me-2"></i>সহায়তা</h6>
-                                    <a target="_blank" href="https://youtu.be/op7-Pdj1qns?si=QNViMd3VFyFQXow8" class="small text-decoration-none d-block text-dark">TRX ID সম্পর্কে বিস্তারিত জানতে এখানে <span style="color: blue;">ক্লিক</span> করুন <i class="bi bi-arrow-right-short"></i></a>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <!-- স্কুল হেডার ও কার্ড ডিজাইন -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+                        <div class="card-header bg-white border-0 pt-4 pb-0 text-center">
+                            <h2 class="fw-bold text-primary mb-1">বেড়ইল সরকারি প্রাথমিক বিদ্যালয়</h2>
+                            <p class="text-muted">অনলাইন ফর্ম পূরণ নির্দেশনা</p>
+                        </div>
+
+                        <div class="card-body p-4 pt-2">
+
+                            <div class="mt-4 text-center">
+                                <div
+                                    class="alert alert-primary border-0 rounded-pill py-2 shadow-sm d-inline-block px-4">
+                                    <i class="bi bi-cursor-fill me-2"></i>
+                                    নিচে থাকা <strong>"Fill Out Form"</strong> নীল বাটনে ক্লিক করুন ফর্ম ফিলাপ করার জন্য
                                 </div>
                             </div>
                         </div>
-
-                        <div class="mt-4 text-center">
-                            <div class="alert alert-primary border-0 rounded-pill py-2 shadow-sm d-inline-block px-4">
-                                <i class="bi bi-cursor-fill me-2"></i>
-                                নিচে থাকা <strong>"Fill Out Form"</strong> নীল বাটনে ক্লিক করুন ফর্ম ফিলাপ করার জন্য
-                            </div>
-                        </div>
                     </div>
-                </div>
+                    <div class="google-form-wrapper shadow-lg rounded-4 overflow-hidden border py-2">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSdJjZ91Ry0kbFLEFMaCzyTGr_4L5nXORz7K9BLezzA4SZtHuA/viewform?embedded=true"
+                            width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0"
+                            style="display: block; width: 100%; border: none;">
+                            Loading…
+                        </iframe>
+                    </div>
 
-                <!-- গুগল ফর্ম সরাসরি লোড -->
-                <div class="google-form-wrapper shadow-lg rounded-4 overflow-hidden border py-2">
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSemJLYQj5LopmlR6NuVDSORt6MyWuuWFHj-hD7t4_QYwHr4kQ/viewform?embedded=true" 
-                        width="100%" 
-                        height="280" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0"
-                        style="display: block;">
-                        Loading…
-                    </iframe>
-                </div>
-                
-                <div class="text-center mt-3">
-                    <p class="small text-muted">ফর্ম দেখতে সমস্যা হচ্ছে? 
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSemJLYQj5LopmlR6NuVDSORt6MyWuuWFHj-hD7t4_QYwHr4kQ/viewform" target="_blank" class="fw-bold text-decoration-none">নতুন ট্যাবে ওপেন করুন</a>
-                    </p>
-                </div>
+                    <div class="text-center mt-3">
+                        <p class="small text-muted">ফর্ম দেখতে সমস্যা হচ্ছে?
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJjZ91Ry0kbFLEFMaCzyTGr_4L5nXORz7K9BLezzA4SZtHuA/viewform?usp=header"
+                                target="_blank" class="fw-bold text-decoration-none">নতুন ট্যাবে ওপেন করুন</a>
+                        </p>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- FOOTER -->
@@ -312,7 +299,7 @@
                 </div>
                 <div class="col-md-4">
                     <h5>Find Us</h5>
-                    <p><i class="fas fa-map-marker-alt"> </i>  Berail, Jamalpur, Joypurhat</p>
+                    <p><i class="fas fa-map-marker-alt"> </i> Berail, Jamalpur, Joypurhat</p>
                 </div>
             </div>
             <hr>

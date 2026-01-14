@@ -126,32 +126,34 @@
             color: white;
             padding: 60px 0 30px;
         }
-        
-    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
-::-webkit-scrollbar {
-    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
-    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
-}
 
-/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px;
-}
+        /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* লম্বালম্বি স্ক্রলবারের জন্য */
+            height: 10px;
+            /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+        }
 
-/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
-    border-radius: 10px;
-    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
-}
+        /* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
 
-/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
-::-webkit-scrollbar-thumb:hover {
-    background: #4ab684; 
-}
+        /* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #06787c, #218838);
+            /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+            /* থাম্ব এর চারপাশে বর্ডার */
+        }
 
-
+        /* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4ab684;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
 </head>
@@ -159,28 +161,29 @@
 <body>
 
 
-<!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-white shadow-sm" id="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top  bg-dark py-4 shadow-sm" id="navbar">
         <div class="container">
             <!-- LOGO ONLY -->
-            <a class="navbar-brand p-0" href="index.html">
-                <img src="images/bgps_logo.png" 
-                     alt="BGPS Logo" style="height: 80px; width: 80px;">
+            <a class="navbar-brand p-0  d-lg-none d-md-block" href="index.html">
+                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 80px; width: 80px;">
             </a>
 
-             <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-success active" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
-                
+                <ul class="navbar-nav mx-auto align-items-center">
+                    <li class="nav-item "><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-success active" href="academics.html">Academics</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admission.html">Admission</a></li>
+
                 </ul>
             </div>
         </div>
@@ -228,6 +231,7 @@
                             basic arithmetic to geometry.</p>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="subject-card">
                         <i class="fas fa-flask subject-icon"></i>
@@ -236,6 +240,7 @@
                             explore the world around them.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -250,50 +255,33 @@
                         maximum contact time between teachers and students.</p>
                 </div>
                 <div class="col-lg-6 text-lg-end" data-aos="fade-left">
-                    <span class="badge bg-success p-2 px-3">School Ends at 4:00 PM</span>
+                    <span class="badge bg-success p-2 px-3">School Ends at 4:15 PM</span>
                 </div>
             </div>
 
-            <div class="routine-container" data-aos="zoom-in">
-                <div class="table-responsive">
-                    <table class="table table-hover mb-0">
-                        <thead>
-                            <tr>
-                                <th class="py-3 px-4">Time Period</th>
-                                <th class="py-3">Activity / Subject</th>
-                                <th class="py-3">Grades</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="py-3 px-4 fw-bold">09:00 - 09:30</td>
-                                <td>Morning Assembly & Physical Exercise</td>
-                                <td>All Classes</td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 px-4 fw-bold">09:30 - 10:15</td>
-                                <td>1st Period: Core Subject (Bangla/Math)</td>
-                                <td>Class 1 - 5</td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 px-4 fw-bold">12:30 - 01:15</td>
-                                <td class="text-secondary fw-bold">Lunch & Prayer Break</td>
-                                <td>All Classes</td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 px-4 fw-bold">01:15 - 03:00</td>
-                                <td>Science, Religion & Arts Activities</td>
-                                <td>Class 3 - 5</td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 px-4 fw-bold">03:00 - 04:00</td>
-                                <td>Special remedial, SRM & Co-curricular</td>
-                                <td>Class 4 - 5</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+           <div class="routine-container" data-aos="zoom-in">
+    <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-header bg-primary text-white p-3">
+            <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i> Class Routine 2026</h5>
+        </div>
+        <div class="card-body p-0">
+            <iframe 
+                src="assets/routine.pdf#toolbar=0" 
+                width="100%" 
+                height="500px" 
+                style="border: none;">
+                <p>Your browser does not support PDFs. 
+                   <a href="assets/routine.pdf">Download PDF</a>
+                </p>
+            </iframe>
+        </div>
+        <div class="card-footer bg-light text-center">
+            <a href="assets/routine.pdf" download class="btn btn-outline-primary btn-sm fw-bold">
+                <i class="fas fa-download me-2"></i> Download Full Routine
+            </a>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
@@ -301,25 +289,43 @@
     <section class="py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-7" data-aos="fade-right">
-                    <div class="assessment-box">
-                        <h3 class="fw-bold mb-4">New Assessment Policy</h3>
-                        <p>Under the new national curriculum implemented in 2026, we have shifted from traditional
-                            high-stakes exams to <strong>Continuous Assessment</strong>.</p>
-                        <ul class="list-unstyled mt-4">
-                            <li class="mb-3"><i class="fas fa-check-circle me-2 text-warning"></i> No formal
-                                examinations up to Class 3.</li>
-                            <li class="mb-3"><i class="fas fa-check-circle me-2 text-warning"></i> Evaluation based on
-                                class projects, presentations, and behavior.</li>
-                            <li class="mb-3"><i class="fas fa-check-circle me-2 text-warning"></i> Focus on "Learning by
-                                Doing" and soft skills development.</li>
-                        </ul>
 
-                        <a href="assets/guidline.pdf" download class="btn btn-light mt-3 px-4 fw-bold">
-                            <i class="fas fa-file-pdf me-2"></i> Download Full Guide
-                        </a>
+
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="assessment-box p-4 shadow-sm rounded-4 bg-white">
+                        <h3 class="fw-bold mb-4 text-primary">New Assessment Policy & Campus Facilities</h3>
+                        <p>Under the new national curriculum 2026, we focus on <strong>Continuous Assessment</strong>
+                            supported by a world-class environment:</p>
+
+                        <div class="row mt-4 text-dark">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3"><i class="fas fa-check-circle me-2 text-success"></i> No formal
+                                        exams up to Class 3.</li>
+                                    <li class="mb-3"><i class="fas fa-check-circle me-2 text-success"></i> Project-based
+                                        evaluation.</li>
+                                    <li class="mb-3"><i class="fas fa-check-circle me-2 text-success"></i> Skill-driven
+                                        learning.</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 border-start ps-4">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3"><i class="fas fa-laptop-code me-2 text-success"></i>
+                                        <strong>Multimedia Classrooms:</strong> Interactive digital learning.</li>
+                                    <li class="mb-3"><i class="fas fa-book-reader me-2 text-success"></i> <strong>Book
+                                            Corner:</strong> Developing reading habits.</li>
+                                    <li class="mb-3"><i class="fas fa-running me-2 text-success"></i> <strong>Sports
+                                            Ground:</strong> Physical & mental growth.</li>
+                                    <li class="mb-3"><i class="fas fa-hand-holding-water me-2 text-primary"></i>
+                                        <strong>Clean WASH:</strong> Hygiene first for every student.</li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
                 <div class="col-lg-5" data-aos="fade-left">
                     <div class="p-4 border-start border-4 border-success">
                         <h4 class="fw-bold">Academic Facilities</h4>
@@ -347,7 +353,7 @@
         </div>
     </section>
 
- 
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
