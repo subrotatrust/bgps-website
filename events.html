@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | Beroil Govt. Primary School</title>
+    <title>Events | Berail Govt. Primary School</title>
     <!-- CSS CDNs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,7 +14,7 @@
     <style>
         :root {
             --primary: #006837;
-            --secondary: #f15a24;
+            --secondary: #5a11cf;
             --text-dark: #2d3436;
             --text-muted: #636e72;
         }
@@ -38,7 +38,7 @@
 
 
 
-              /* Header */
+        /* Header */
         .page-header {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951249.jpg');
             background-size: cover;
@@ -47,6 +47,7 @@
             color: white;
             text-align: center;
         }
+
         /* Event Cards */
         .event-card {
             border: none;
@@ -171,71 +172,106 @@
             color: white;
             padding: 60px 0 30px;
         }
-        
-    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
-::-webkit-scrollbar {
-    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
-    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
-}
 
-/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px;
-}
+        /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* লম্বালম্বি স্ক্রলবারের জন্য */
+            height: 10px;
+            /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+        }
 
-/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
-    border-radius: 10px;
-    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
-}
+        /* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
 
-/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
-::-webkit-scrollbar-thumb:hover {
-    background: #4ab684; 
-}
+        /* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #06787c, #218838);
+            /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+            /* থাম্ব এর চারপাশে বর্ডার */
+        }
 
+        /* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4ab684;
+        }
 
+        .body {
+            font-family: "IBM Plex Serif", serif;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body>
+<body class="body">
 
-  
-<!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-dark py-4 shadow-sm" id="navbar">
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 shadow-sm" id="navbar">
         <div class="container">
-            <!-- LOGO ONLY -->
-            <a class="navbar-brand p-0  d-lg-none d-md-block" href="index.html">
-                <img src="images/bgps_logo.png" 
-                      alt="BGPS Logo" style="height: 80px; width: 80px;">
+            <a class="navbar-brand p-0 d-lg-none d-md-block" href="index.html">
+                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 60px; width: 60px;">
             </a>
 
-             <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 bg-success text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link  active text-success" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="admission.html">Admission</a></li>
-                 
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="index.html">
+                            <i class="fa-solid fa-house-chimney me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="about.html">
+                            <i class="fa-solid fa-circle-info me-2"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="academics.html">
+                            <i class="fa-solid fa-book-open-reader me-2"></i>Academics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-success fw-bold px-3" href="events.html">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="contact.html">
+                            <i class="fa-solid fa-envelope-open-text me-2"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="admission.html">
+                            <i class="fa-solid fa-graduation-cap me-2"></i>Admission
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- HEADER - Simplified -->
-<header class="page-header">
+    <header class="page-header">
         <div class="container header-content" data-aos="zoom-out">
             <h1 class="fw-bold">Our School Events</h1>
-            <p class="lead mt-3">Discover the vibrant celebrations, academic meets, and cultural activities at Beroil Govt. Primary School.</p>
+            <p class="lead mt-3">Discover the vibrant celebrations, academic meets, and cultural activities at Berail
+                Govt. Primary School.</p>
         </div>
     </header>
 
@@ -311,7 +347,8 @@
                     <div class="event-card">
                         <div class="event-img-container">
                             <div class="date-badge">16 <span>DEC</span></div>
-                            <img src="images/bangladesh-victory-day-16-december-illustration-free-vector.jpg" class="event-img" alt="Victory Day Bangladesh">
+                            <img src="images/bangladesh-victory-day-16-december-illustration-free-vector.jpg"
+                                class="event-img" alt="Victory Day Bangladesh">
                         </div>
                         <div class="event-body">
                             <span class="event-category">National Day</span>
@@ -329,8 +366,8 @@
                     <div class="event-card">
                         <div class="event-img-container">
                             <div class="date-badge">21 <span>FEB</span></div>
-                            <img src="images/happy-international-mother-language-day-21-february-bangladesh_502601-758.avif" class="event-img"
-                                alt="International Mother Language Day">
+                            <img src="images/happy-international-mother-language-day-21-february-bangladesh_502601-758.avif"
+                                class="event-img" alt="International Mother Language Day">
                         </div>
                         <div class="event-body">
                             <span class="event-category">International Day</span>
@@ -345,51 +382,68 @@
             </div>
         </div>
     </section>
-
-    <!-- PAST HIGHLIGHTS GALLERY -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold" style="color: var(--primary);">Past Highlights</h2>
-                <p class="text-muted">Memories from our previous successful events.</p>
-            </div>
-
-            <div class="row g-3">
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=600&q=80"
-                            alt="Prize giving">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus text-white fa-2x"></i></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1503945438517-f65904a52ce6?auto=format&fit=crop&w=600&q=80"
-                            alt="Classroom activity">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus text-white fa-2x"></i></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80"
-                            alt="Students laughing">
-                        <div class="gallery-overlay"><i class="fas fa-search-plus text-white fa-2x"></i></div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <button class="btn btn-outline-success px-4 py-2 rounded-pill">View All Photos</button>
+    <!-- Highlights -->
+<section class="py-5 overflow-hidden" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row mb-5 justify-content-center text-center">
+            <div class="col-lg-7">
+                <h6 class="text-success fw-bold text-uppercase" style="letter-spacing: 2px;">Gallery & Memories</h6>
+                <h2 class="display-5 fw-bold text-dark">Past <span class="text-success">Highlights</span></h2>
+                <div class="mx-auto mt-2" style="width: 60px; height: 3px; background-color: var(--bs-success);"></div>
+                <p class="text-muted mt-3">Cherished moments from our previous successful events, academic milestones, and cultural celebrations.</p>
             </div>
         </div>
-    </section>
 
-   
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden" style="border-radius: 20px;">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Prize Giving" style="height: 250px; object-fit: cover;">
+                        <span class="badge bg-success position-absolute top-0 end-0 m-3 py-2 px-3">Sports Day</span>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bold mb-2">Annual Prize Giving</h5>
+                        <p class="text-muted small mb-0"><i class="far fa-calendar-alt me-2"></i>January 10, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden" style="border-radius: 20px;">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503945438517-f65904a52ce6?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Classroom Activity" style="height: 250px; object-fit: cover;">
+                        <span class="badge bg-primary position-absolute top-0 end-0 m-3 py-2 px-3">Academic</span>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bold mb-2">Multimedia Classroom</h5>
+                        <p class="text-muted small mb-0"><i class="far fa-calendar-alt me-2"></i>February 15, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden" style="border-radius: 20px;">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://glenrich.edu.bd/wp-content/uploads/2024/08/prothomalo-english_2024-06_48babed8-f38b-42bd-bfff-c98b194d6d9d_GRD1-GRD2-11-of-26-1.webp" class="card-img-top" alt="Students laughing" style="height: 250px; object-fit: cover;">
+                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 py-2 px-3">Cultural</span>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bold mb-2">Cultural Festival</h5>
+                        <p class="text-muted small mb-0"><i class="far fa-calendar-alt me-2"></i>March 26, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+       
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>Beroil GPS</h5>
+                    <h5>Berail GPS</h5>
                     <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
                 </div>
                 <div class="col-md-4 text-center  d-md-block d-none">
@@ -405,7 +459,7 @@
                 </div>
             </div>
             <hr>
-            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+            <p class="text-center mb-0">&copy; 2026 Berail Government Primary School</p>
         </div>
     </footer>
 

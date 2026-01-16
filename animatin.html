@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanta Fog Background</title>
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden; /* সাইড স্ক্রলিং বন্ধ রাখার জন্য */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ভান্টা ইফেক্টের জন্য ব্যাকগ্রাউন্ড কন্টেইনার */
+        #vanta-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* কন্টেন্টের পেছনে রাখার জন্য */
+        }
+
+        /* কন্টেন্ট লেআউট */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.3); /* টেক্সট যাতে পরিষ্কার দেখা যায় */
+        }
+
+        h1 { font-size: 4rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        p { font-size: 1.5rem; opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <div id="vanta-bg"></div>
+
+    <div class="content-wrapper">
+        <h1>Vanta Fog</h1>
+        <p>This is a professionally fixed animated background.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+
+    <script>
+        // Vanta Fog Setup
+        VANTA.FOG({
+            el: "#vanta-bg", // এখানে আইডিটি অবশ্যই ভান্টা ডিভ এর সাথে মিলতে হবে
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0x12c977, // আপনার স্কুলের সবুজ কালার
+            midtoneColor: 0x071e26,
+            lowlightColor: 0x050a0f,
+            baseColor: 0x050a0f,
+            blurFactor: 0.60,
+            speed: 1.50
+        });
+    </script>
+</body>
+</html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Beroil Govt. Primary School</title>
-    
+    <title>Contact Us | Berail Govt. Primary School</title>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -13,10 +14,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        :root { --primary: #006837; --secondary: #f15a24; }
-        
+        :root {
+            --primary: #006837;
+            --secondary: #185EF5;
+        }
+
         /* FIX 1: Prevent Horizontal Scrollbar caused by animations */
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
             font-family: 'Poppins', sans-serif;
@@ -25,129 +30,173 @@
 
         /* FIX 2: Navbar Styling & Z-Index to keep it on top of animations */
         .navbar {
-            z-index: 1050; /* Higher than AOS elements */
+            z-index: 1050;
+            /* Higher than AOS elements */
         }
-        .navbar-brand { 
-            font-weight: 700; 
-            color: var(--primary) !important; 
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
             font-size: 1.2rem;
-        } 
+        }
 
         /* Page Header Style */
-        .page-header { 
+        .page-header {
             /* Using a placeholder image - replace with 'images/contact.png' if you have it */
-            background: linear-gradient(rgba(0,104,55,0.4), rgba(0,104,55,0.6)), url('https://i.pinimg.com/736x/eb/24/b9/eb24b91c97f40e4ab8c180ee9f4cab9c.jpg'); 
-            background-size: cover; 
+            background: linear-gradient(rgba(0, 104, 55, 0.4), rgba(0, 104, 55, 0.6)), url('https://i.pinimg.com/736x/eb/24/b9/eb24b91c97f40e4ab8c180ee9f4cab9c.jpg');
+            background-size: cover;
             background-position: center;
-            padding: 100px 0; 
-            color: white; 
-            text-align: center; 
+            padding: 100px 0;
+            color: white;
+            text-align: center;
             position: relative;
         }
 
         /* Card Styles */
-        .contact-info-card { 
-            border: none; 
-            border-radius: 15px; 
-            padding: 30px; 
-            background: white; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-            height: 100%; 
+        .contact-info-card {
+            border: none;
+            border-radius: 15px;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 100%;
             transition: transform 0.3s ease;
         }
+
         .contact-info-card:hover {
             transform: translateY(-10px);
         }
 
-        .info-icon { 
-            width: 70px; 
-            height: 70px; 
-            background: var(--secondary); 
-            color: white; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            margin-bottom: 20px; 
-            font-size: 28px; 
+        .info-icon {
+            width: 70px;
+            height: 70px;
+            background: #3512d3ce;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
 
-        .btn-primary { 
-            background: var(--primary); 
-            border: none; 
-            padding: 12px 30px; 
+        .btn-primary {
+            background: var(--primary);
+            border: none;
+            padding: 12px 30px;
             transition: all 0.3s;
         }
+
         .btn-primary:hover {
             background: #004d29;
             transform: scale(1.02);
         }
 
-        footer { background: #111; color: white; padding: 60px 0 20px; }
-        
+        footer {
+            background: #111;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
         /* Map Container Height Fix */
         .map-container {
             min-height: 450px;
             height: 100%;
             border-radius: 1rem;
             overflow: hidden;
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
 
-        
-    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
-::-webkit-scrollbar {
-    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
-    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
-}
 
-/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px;
-}
+        /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* লম্বালম্বি স্ক্রলবারের জন্য */
+            height: 10px;
+            /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+        }
 
-/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
-    border-radius: 10px;
-    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
-}
+        /* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
 
-/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
-::-webkit-scrollbar-thumb:hover {
-    background: #4ab684; 
-}
+        /* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #06787c, #218838);
+            /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+            /* থাম্ব এর চারপাশে বর্ডার */
+        }
 
+        /* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4ab684;
+        }
 
+        .body {
+            font-family: "IBM Plex Serif", serif;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
-<body>
+
+<body class="body">
 
 
-<!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-dark py-4 shadow-sm" id="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 shadow-sm" id="navbar">
         <div class="container">
-            <!-- LOGO ONLY -->
-            <a class="navbar-brand p-0  d-lg-none d-md-block" href="index.html">
-                <img src="images/bgps_logo.png" 
-                      alt="BGPS Logo" style="height: 80px; width: 80px;">
+            <a class="navbar-brand p-0 d-lg-none d-md-block" href="index.html">
+                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 60px; width: 60px;">
             </a>
 
-         <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 text-white bg-success" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link text-success active" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="admission.html">Admission</a></li>
-               
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="index.html">
+                            <i class="fa-solid fa-house-user me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="about.html">
+                            <i class="fa-solid fa-school me-2"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="academics.html">
+                            <i class="fa-solid fa-book-open-reader me-2"></i>Academics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="events.html">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success active fw-bold px-3" href="contact.html">
+                            <i class="fa-solid fa-headset me-2"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="admission.html">
+                            <i class="fa-solid fa-file-signature me-2"></i>Admission
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -164,28 +213,30 @@
     <!-- MAIN CONTENT -->
     <section class="py-5">
         <div class="container my-5">
-            
+
             <!-- Contact Info Cards -->
             <div class="row g-4 mb-5 justify-content-center">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
                     <div class="contact-info-card text-center">
                         <div class="info-icon mx-auto"><i class="fas fa-map-marker-alt"></i></div>
                         <h5>Our Location</h5>
-                        <p class="text-muted">Village: Beroil, Jamalpur,Joypurhat<br> Rajshahi, Bangladesh</p>
+                        <p class="text-muted">Village: Berail, Jamalpur,Joypurhat<br> Rajshahi, Bangladesh</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
                     <div class="contact-info-card text-center">
                         <div class="info-icon mx-auto"><i class="fas fa-phone-alt"></i></div>
                         <h5>Phone Number</h5>
-                        <p class="text-muted">+880 1798985161<br>+880 1782762088</p>
+                        <p class="text-muted"> <i class="fa-solid fa-circle-chevron-right mx-2 text-success"></i> +880 1798985161<br>
+                            <i class="fa-solid fa-circle-chevron-right mx-2 text-success"></i>+880 1782762088</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="contact-info-card text-center">
                         <div class="info-icon mx-auto"><i class="fas fa-envelope"></i></div>
                         <h5>Email Support</h5>
-                        <p class="text-muted">absnayan191@gmail.com<br>headmaster@beroilgps.edu.bd</p>
+                        <p class="text-muted"> <i class="fa-solid fa-circle-chevron-right mx-2 text-success"></i> absnayan191@gmail.com </p> 
+                          <p>  <i style="margin-left: -11px;" class="fa-solid fa-circle-chevron-right text-success"></i> <span class="ms-2"> barayil.gps@gmail.com</span> </p>
                     </div>
                 </div>
             </div>
@@ -194,32 +245,57 @@
 
             <!-- FIX 4: Added overflow-hidden to row to prevent animation spill-over -->
             <div class="row g-5 overflow-hidden">
-                
+
                 <!-- Contact Form -->
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
                     <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm h-100">
-                        <h3 class="fw-bold mb-4 text-success">Send us a Message</h3>
-                        <form action="https://formsubmit.co/absnayan191@gmail.com" method="POST"> <!-- Added method structure -->
+                        <h3 class="fw-bold mb-4 text-primary">Send us a Message</h3>
+                        <form action="https://formsubmit.co/absnayan191@gmail.com" method="POST">
+
+                            <input type="hidden" name="_subject" value="New Website Message! 🚀">
+                            <input type="hidden" name="_template" value="table"> <input type="hidden" name="_captcha"
+                                value="false"> <input type="hidden" name="_next"
+                                value="https://yourwebsite.com/thanks.html">
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold">Your Name</label>
-                                    <input type="text" class="form-control form-control-lg bg-light" name="name" placeholder="Enter name" required>
+                                    <label class="form-label fw-bold text-dark">Your Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i
+                                                class="fas fa-user text-primary"></i></span>
+                                        <input type="text" class="form-control form-control-lg bg-light border-start-0"
+                                            name="Full_Name" placeholder="Enter name" required>
+                                    </div>
                                 </div>
+
                                 <div class="col-md-6">
-                                    <label class="form-label fw-bold">Email Address</label>
-                                    <input type="email" class="form-control form-control-lg bg-light" name="email" placeholder="Enter email" required>
+                                    <label class="form-label fw-bold text-dark">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i
+                                                class="fas fa-envelope text-primary"></i></span>
+                                        <input type="email" class="form-control form-control-lg bg-light border-start-0"
+                                            name="Email_Address" placeholder="Enter email" required>
+                                    </div>
                                 </div>
+
                                 <div class="col-12">
-                                    <label class="form-label fw-bold">Subject</label>
-                                    <input type="text" class="form-control form-control-lg bg-light" name="subject" placeholder="What is this about?">
+                                    <label class="form-label fw-bold text-dark">Subject</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i
+                                                class="fas fa-tag text-primary"></i></span>
+                                        <input type="text" class="form-control form-control-lg bg-light border-start-0"
+                                            name="Topic_Subject" placeholder="What is this about?">
+                                    </div>
                                 </div>
+
                                 <div class="col-12">
-                                    <label class="form-label fw-bold">Message</label>
-                                    <textarea class="form-control form-control-lg bg-light" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                                    <label class="form-label fw-bold text-dark">Message Details</label>
+                                    <textarea class="form-control form-control-lg bg-light" name="Message_Content"
+                                        rows="5" placeholder="Write your message here..." required></textarea>
                                 </div>
+
                                 <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-primary btn-lg w-100 shadow-sm">
-                                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                                    <button type="submit" class="btn btn-success btn-lg w-100 shadow-sm py-3 fw-bold">
+                                        <i class="fas fa-paper-plane me-2"></i> SEND MESSAGE
                                     </button>
                                 </div>
                             </div>
@@ -230,9 +306,10 @@
                 <!-- Google Map -->
                 <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
                     <div class="map-container">
-                        <iframe 
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9933.15608893864!2d89.04923900717563!3d25.04060455637282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fc8d004ad33a85%3A0xe6478d145af5dc27!2z4Kas4KeH4Kah4Ka84KaH4KayIOCmuOCmsOCmleCmvuCmsOCngCDgpqrgp43gprDgpr7gpqXgpq7gpr_gppUg4Kas4Ka_4Kam4KeN4Kav4Ka-4Kay4Kav4Ka8!5e0!3m2!1sen!2sbd!4v1767882284085!5m2!1sen!2sbd"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
@@ -246,33 +323,38 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-md-4">
-                    <h5 class="text-white fw-bold">Beroil GPS</h5>
-                    <p class="text-secondary small">Cultivating knowledge, discipline, and ethics in the hearts of our future leaders since 1970.</p>
+                    <h5 class="text-white fw-bold">Berail GPS</h5>
+                    <p class="text-secondary small">Cultivating knowledge, discipline, and ethics in the hearts of our
+                        future leaders since 1990.</p>
                 </div>
                 <div class="col-md-4 text-center  d-md-block d-none">
                     <h5 class="text-white">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none hover-white">About Us</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none hover-white">Contact Info</a></li>
+                        <li class="mb-2"><a href="about.html"
+                                class="text-secondary text-decoration-none hover-white">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-secondary text-decoration-none hover-white">Contact Info</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5 class="text-white">Visit Us</h5>
-                    <p class="text-secondary small mb-0"><i class="fas fa-map-marker-alt me-2"></i> Berail, Jamalpur, Joypurhat</p>
+                    <p class="text-secondary small mb-0"><i class="fas fa-map-marker-alt me-2"></i> Berail, Jamalpur,
+                        Joypurhat</p>
                     <p class="text-secondary small"><i class="fas fa-phone me-2"></i>+880 1798985161</p>
                 </div>
             </div>
             <hr class="border-secondary mt-4">
-            <p class="text-center text-secondary mb-0 small">&copy; 2026 Beroil Government Primary School. All Rights Reserved.</p>
+            <p class="text-center text-secondary mb-0 small">&copy; 2026 Berail Government Primary School. All Rights
+                Reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- Initialize AOS -->
     <script>
         AOS.init({
@@ -284,4 +366,5 @@
         });
     </script>
 </body>
+
 </html>

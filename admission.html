@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ভর্তি ফরম | Beroil Government Primary School</title>
+    <title>ভর্তি ফরম | Berail Government Primary School</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
     <style>
         :root {
             --primary-color: #198754;
-            --secondary-color: #0d6efd;
+            --secondary-color: #185EF5;
             --bkash-color: #e2136e;
             --dark-bg: #212529;
         }
@@ -136,7 +136,7 @@
         }
 
         .card {
-            border-left: 5px solid #0d6efd !important;
+            border-left: 5px solid #185EF5 !important;
             /* বাম পাশে একটি নীল বর্ডার */
         }
 
@@ -156,7 +156,7 @@
 
         .alert-primary {
             background-color: #e7f1ff;
-            color: #0d6efd;
+            color: #185EF5;
             font-size: 0.95rem;
         }
 
@@ -195,34 +195,66 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #4ab684;
         }
+
+        .body {
+            font-family: "IBM Plex Serif", serif;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 
 </head>
 
-<body>
+<body class="body">
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-dark py-4 shadow-sm" id="navbar">
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 shadow-sm" id="navbar">
         <div class="container">
-            <!-- LOGO ONLY -->
-            <a class="navbar-brand p-0  d-lg-none d-md-block" href="index.html">
-                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 80px; width: 80px;">
+            <a class="navbar-brand p-0 d-lg-none d-md-block" href="index.html">
+                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 60px; width: 60px;">
             </a>
 
-            <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0 text-white bg-success" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link active text-success" href="admission.html">Admission</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="index.html">
+                            <i class="fa-solid fa-house-chimney me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="about.html">
+                            <i class="fa-solid fa-building-columns me-2"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="academics.html">
+                            <i class="fa-solid fa-book-open me-2"></i>Academics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="events.html">
+                            <i class="fa-solid fa-calendar-days me-2"></i>Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="contact.html">
+                            <i class="fa-solid fa-address-book me-2"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-success fw-bold px-3" href="admission.html">
+                            <i class="fa-solid fa-user-graduate me-2"></i>Admission
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -287,7 +319,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>Beroil GPS</h5>
+                    <h5>Berail GPS</h5>
                     <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
                 </div>
                 <div class="col-md-4 text-center  d-md-block d-none">
@@ -299,11 +331,11 @@
                 </div>
                 <div class="col-md-4">
                     <h5>Find Us</h5>
-                    <p><i class="fas fa-map-marker-alt"> </i> Berail, Jamalpur, Joypurhat</p>
+                    <p> <i class="fas fa-map-marker-alt"> </i> Berail, Jamalpur, Joypurhat</p>
                 </div>
             </div>
             <hr>
-            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+            <p class="text-center mb-0">&copy; 2026 Berail Government Primary School</p>
         </div>
     </footer>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics | Beroil Govt. Primary School</title>
+    <title>Academics | Berail Govt. Primary School</title>
     <!-- CSS CDNs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,7 +14,7 @@
     <style>
         :root {
             --primary: #006837;
-            --secondary: #f15a24;
+            --secondary: #185EF5;
             --text-dark: #2d3436;
             --text-muted: #636e72;
         }
@@ -154,36 +154,68 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #4ab684;
         }
+
+        .body {
+            font-family: "IBM Plex Serif", serif;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body>
+<body class="body">
 
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-dark py-4 shadow-sm" id="navbar">
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 shadow-sm" id="navbar">
         <div class="container">
-            <!-- LOGO ONLY -->
-            <a class="navbar-brand p-0  d-lg-none d-md-block" href="index.html">
-                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 80px; width: 80px;">
+            <a class="navbar-brand p-0 d-lg-none d-md-block bg-success" href="index.html">
+                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 60px; width: 60px;">
             </a>
 
-            <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto align-items-center">
-                    <li class="nav-item "><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-success active" href="academics.html">Academics</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="index.html">
+                            <i class="fa-solid fa-house-chimney me-2"></i>Home
+                        </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="admission.html">Admission</a></li>
-
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="about.html">
+                            <i class="fa-solid fa-circle-info me-2"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success active fw-bold px-3" href="academics.html">
+                            <i class="fa-solid fa-book-open-reader me-2"></i>Academics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="events.html">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="contact.html">
+                            <i class="fa-solid fa-envelope-open me-2"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="admission.html">
+                            <i class="fa-solid fa-user-plus me-2"></i>Admission
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -259,29 +291,25 @@
                 </div>
             </div>
 
-           <div class="routine-container" data-aos="zoom-in">
-    <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
-        <div class="card-header bg-primary text-white p-3">
-            <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i> Class Routine 2026</h5>
-        </div>
-        <div class="card-body p-0">
-            <iframe 
-                src="assets/routine.pdf#toolbar=0" 
-                width="100%" 
-                height="500px" 
-                style="border: none;">
-                <p>Your browser does not support PDFs. 
-                   <a href="assets/routine.pdf">Download PDF</a>
-                </p>
-            </iframe>
-        </div>
-        <div class="card-footer bg-light text-center">
-            <a href="assets/routine.pdf" download class="btn btn-outline-primary btn-sm fw-bold">
-                <i class="fas fa-download me-2"></i> Download Full Routine
-            </a>
-        </div>
-    </div>
-</div>
+            <div class="routine-container" data-aos="zoom-in">
+                <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+                    <div class="card-header bg-primary text-white p-3">
+                        <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i> Class Routine 2026</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <iframe src="assets/routine.pdf#toolbar=0" width="100%" height="500px" style="border: none;">
+                            <p>Your browser does not support PDFs.
+                                <a href="assets/routine.pdf">Download PDF</a>
+                            </p>
+                        </iframe>
+                    </div>
+                    <div class="card-footer bg-light text-center">
+                        <a href="assets/routine.pdf" download class="btn btn-outline-primary btn-sm fw-bold">
+                            <i class="fas fa-download me-2"></i> Download Full Routine
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -312,13 +340,15 @@
                             <div class="col-md-6 border-start ps-4">
                                 <ul class="list-unstyled">
                                     <li class="mb-3"><i class="fas fa-laptop-code me-2 text-success"></i>
-                                        <strong>Multimedia Classrooms:</strong> Interactive digital learning.</li>
+                                        <strong>Multimedia Classrooms:</strong> Interactive digital learning.
+                                    </li>
                                     <li class="mb-3"><i class="fas fa-book-reader me-2 text-success"></i> <strong>Book
                                             Corner:</strong> Developing reading habits.</li>
                                     <li class="mb-3"><i class="fas fa-running me-2 text-success"></i> <strong>Sports
                                             Ground:</strong> Physical & mental growth.</li>
                                     <li class="mb-3"><i class="fas fa-hand-holding-water me-2 text-primary"></i>
-                                        <strong>Clean WASH:</strong> Hygiene first for every student.</li>
+                                        <strong>Clean WASH:</strong> Hygiene first for every student.
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -359,7 +389,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>Beroil GPS</h5>
+                    <h5>Berail GPS</h5>
                     <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
                 </div>
                 <div class="col-md-4 text-center  d-md-block d-none">
@@ -375,7 +405,7 @@
                 </div>
             </div>
             <hr>
-            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+            <p class="text-center mb-0">&copy; 2026 Berail Government Primary School</p>
         </div>
     </footer>
 

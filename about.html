@@ -1,57 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Beroil Govt. Primary School</title>
-    
+    <title>About Us | Berail Govt. Primary School</title>
+
     <!-- CSS CDNs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
-        :root { 
-            --primary: #006837; 
-            --secondary: #f15a24; 
-            --text-dark: #2d3436; 
-            --text-muted: #636e72; 
+        :root {
+            --primary: #006837;
+            --secondary: #185EF5;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
         }
 
-        html { scroll-behavior: smooth; }
-        
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            color: var(--text-dark); 
-            line-height: 1.6; 
-            overflow-x: hidden; /* Prevents AOS horizontal scroll issues */
+        html {
+            scroll-behavior: smooth;
         }
-        
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Prevents AOS horizontal scroll issues */
+        }
+
         /* Navbar */
-        .navbar-brand { 
-            font-weight: 700; 
-            color: var(--primary) !important; 
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
             font-size: 1.2rem;
-            white-space: normal; /* Allows text wrap on very small screens */
+            white-space: normal;
+            /* Allows text wrap on very small screens */
             max-width: 250px;
         }
-        .nav-link { font-weight: 500; color: #333; transition: 0.3s; }
-    
+
+        .nav-link {
+            font-weight: 500;
+            color: #333;
+            transition: 0.3s;
+        }
+
         /* Page Header */
-        .page-header { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1400&q=80'); 
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1400&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-            padding: 140px 0; 
-            color: white; 
+            background-attachment: fixed;
+            /* Parallax effect */
+            padding: 140px 0;
+            color: white;
             text-align: center;
         }
 
         /* Section Styling */
-        section { padding: 80px 0; }
-        .section-title { font-weight: 700; color: var(--primary); margin-bottom: 25px; position: relative; }
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 25px;
+            position: relative;
+        }
+
         .section-title::after {
             content: '';
             display: block;
@@ -60,18 +80,27 @@
             background: var(--secondary);
             margin-top: 10px;
         }
-        .text-center .section-title::after { margin: 10px auto; }
+
+        .text-center .section-title::after {
+            margin: 10px auto;
+        }
 
         /* History Image */
-        .history-img-wrapper { position: relative; }
-        .history-img { 
-            border-radius: 15px; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
-            width: 100%; 
-            height: auto;
-            transition: 0.5s; 
+        .history-img-wrapper {
+            position: relative;
         }
-        .history-img:hover { transform: translateY(-10px); }
+
+        .history-img {
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            height: auto;
+            transition: 0.5s;
+        }
+
+        .history-img:hover {
+            transform: translateY(-10px);
+        }
 
         /* Values Cards */
         .value-card {
@@ -79,57 +108,102 @@
             padding: 40px 30px;
             border-radius: 20px;
             background: #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: 0.4s;
             height: 100%;
             text-align: center;
         }
-        .value-card:hover { 
-            transform: translateY(-10px); 
-            background: var(--primary); 
-            color: #fff !important; 
-        }
-        .value-card:hover .value-icon, 
-        .value-card:hover p, 
-        .value-card:hover h4 { color: #fff !important; }
-        
-        .value-icon { font-size: 3.5rem; color: var(--secondary); margin-bottom: 20px; transition: 0.3s; }
 
-        /* Stats Section */
-        .stat-box { 
-            background: var(--primary); 
-            color: white; 
-            padding: 30px; 
-            border-radius: 15px; 
-            text-align: center; 
+        .value-card:hover {
+            transform: translateY(-10px);
+            background: var(--primary);
+            color: #fff !important;
+        }
+
+        .value-card:hover .value-icon,
+        .value-card:hover p,
+        .value-card:hover h4 {
+            color: #fff !important;
+        }
+
+        .value-icon {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
             transition: 0.3s;
         }
-        .stat-box:hover { background: #004d29; }
-        .stat-number { font-size: 2.8rem; font-weight: 700; display: block; line-height: 1; }
+
+        /* Stats Section */
+        .stat-box {
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .stat-box:hover {
+            background: #004d29;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
 
         /* Teacher Cards */
         .teacher-card {
             border: none;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
             transition: 0.3s;
         }
-        .teacher-card:hover { transform: scale(1.03); }
-        .teacher-img { height: 320px; object-fit: cover; width: 100%; }
-        .teacher-info { padding: 20px; text-align: center; background: white; }
-        .teacher-name { font-weight: 700; color: var(--primary); margin-bottom: 5px; }
 
-        footer { background: #111; color: white; padding: 60px 0 30px; }
-        .social-links a { 
-            color: white; 
-            font-size: 1.2rem; 
-            margin: 0 10px; 
-            transition: 0.3s; 
+        .teacher-card:hover {
+            transform: scale(1.03);
+        }
+
+        .teacher-img {
+            height: 320px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .teacher-info {
+            padding: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .teacher-name {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: 0.3s;
             opacity: 0.7;
         }
-        .social-links a:hover { opacity: 1; color: var(--secondary); }
+
+        .social-links a:hover {
+            opacity: 1;
+            color: var(--secondary);
+        }
 
         /* Back to top button */
         #btn-back-to-top {
@@ -140,65 +214,101 @@
             z-index: 100;
         }
 
-        
-    /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
-::-webkit-scrollbar {
-    width: 10px; /* লম্বালম্বি স্ক্রলবারের জন্য */
-    height: 10px; /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
-}
 
-/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px;
-}
+        /* ১. স্ক্রলবারের পুরো উইডথ বা চওড়া কত হবে */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* লম্বালম্বি স্ক্রলবারের জন্য */
+            height: 10px;
+            /* আড়াআড়ি (Horizontal) স্ক্রলবারের জন্য */
+        }
 
-/* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #06787c, #218838); /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
-    border-radius: 10px;
-    border: 2px solid #f1f1f1; /* থাম্ব এর চারপাশে বর্ডার */
-}
+        /* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
 
-/* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
-::-webkit-scrollbar-thumb:hover {
-    background: #4ab684; 
-}
+        /* ৩. স্ক্রলবারের যে অংশটি মাউস দিয়ে ধরা হয় (Thumb) */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #06787c, #218838);
+            /* আপনার স্কুলের সবুজ কালারের সাথে মিল রেখে */
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+            /* থাম্ব এর চারপাশে বর্ডার */
+        }
 
+        /* ৪. মাউস নিলে স্ক্রলবারের রঙ পরিবর্তন (Hover Effect) */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4ab684;
+        }
 
+        .body {
+            font-family: "IBM Plex Serif", serif;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
-<body>
+
+<body class="body">
 
     <!-- Back to top button -->
     <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
- 
-<!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top  bg-dark py-4 shadow-sm" id="navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 shadow-sm" id="navbar">
         <div class="container">
-            <!-- LOGO ONLY -->
-            <a class="navbar-brand p-0  d-lg-none d-md-block" href="index.html">
-                <img src="images/bgps_logo.png" 
-                       alt="BGPS Logo" style="height: 80px; width: 80px;">
+            <a class="navbar-brand p-0 d-lg-none d-md-block bg-success" href="index.html">
+                <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 60px; width: 60px;">
             </a>
 
-          <button class="navbar-toggler border-none bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active text-success" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="admission.html">Admission</a></li>
-              
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="index.html">
+                            <i class="fa-solid fa-house-chimney me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-success fw-bold px-3" href="about.html">
+                            <i class="fa-solid fa-circle-info me-2"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="academics.html">
+                            <i class="fa-solid fa-book-open-reader me-2"></i>Academics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="events.html">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="contact.html">
+                            <i class="fa-solid fa-paper-plane me-2"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="admission.html">
+                            <i class="fa-solid fa-user-plus me-2"></i>Admission
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -208,7 +318,7 @@
     <header class="page-header">
         <div class="container" data-aos="zoom-in">
             <h1 class="display-3 fw-bold">About Our School</h1>
-            <p class="lead fs-4">A tradition of excellence in education since 1970.</p>
+            <p class="lead fs-4">A tradition of excellence in education since 1990.</p>
         </div>
     </header>
 
@@ -218,15 +328,19 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="history-img-wrapper">
-                        <img src="https://i.ibb.co.com/bR5KG0t7/IMG-20260111-115451.jpg" class="history-img" alt="Students in classroom">
+                        <img src="https://i.ibb.co.com/bR5KG0t7/IMG-20260111-115451.jpg" class="history-img"
+                            alt="Students in classroom">
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <h6 class="text-secondary fw-bold text-uppercase mb-3">Our Journey</h6>
                     <h2 class="section-title">Rooted in Knowledge, Growing in Character</h2>
-                    <p class="lead-text text-dark fw-medium">Beroil Government Primary School has been a pillar of the community for over 50 years.</p>
-                    <p class="text-muted">Since our founding in 1970, we have evolved from a small village school into a modern primary institution. We focus not only on the National Curriculum but also on digital literacy, sports, and cultural development.</p>
-                    
+                    <p class="lead-text text-dark fw-medium">Berail Government Primary School has been a pillar of the
+                        community for over 50 years.</p>
+                    <p class="text-muted">Since our founding in 1990, we have evolved from a small village school into a
+                        modern primary institution. We focus not only on the National Curriculum but also on digital
+                        literacy, sports, and cultural development.</p>
+
                     <div class="row mt-4 g-4">
                         <div class="col-sm-6">
                             <div class="stat-box">
@@ -258,21 +372,24 @@
                     <div class="value-card">
                         <i class="fas fa-lightbulb value-icon"></i>
                         <h4>Our Vision</h4>
-                        <p class="text-muted">To be the beacon of quality education in the region, fostering creativity and critical thinking in every child.</p>
+                        <p class="text-muted">To be the beacon of quality education in the region, fostering creativity
+                            and critical thinking in every child.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="value-card">
                         <i class="fas fa-rocket value-icon"></i>
                         <h4>Our Mission</h4>
-                        <p class="text-muted">Providing a safe, inclusive environment that empowers students with modern skills and strong moral ethics.</p>
+                        <p class="text-muted">Providing a safe, inclusive environment that empowers students with modern
+                            skills and strong moral ethics.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="value-card">
                         <i class="fas fa-hands-helping value-icon"></i>
                         <h4>Our Values</h4>
-                        <p class="text-muted">Respect, Honesty, Discipline, and Teamwork. We believe in building citizens, not just students.</p>
+                        <p class="text-muted">Respect, Honesty, Discipline, and Teamwork. We believe in building
+                            citizens, not just students.</p>
                     </div>
                 </div>
             </div>
@@ -290,7 +407,8 @@
                 <!-- Teacher 1 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" class="teacher-img" alt="Abdur Rahman">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80"
+                            class="teacher-img" alt="Abdur Rahman">
                         <div class="teacher-info">
                             <h5 class="teacher-name">Abdur Rahman</h5>
                             <p class="small text-muted mb-3">Headmaster (M.A. Edu)</p>
@@ -304,7 +422,8 @@
                 <!-- Teacher 2 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" class="teacher-img" alt="Nusrat Jahan">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80"
+                            class="teacher-img" alt="Nusrat Jahan">
                         <div class="teacher-info">
                             <h5 class="teacher-name">Nusrat Jahan</h5>
                             <p class="small text-muted mb-3">English Teacher</p>
@@ -318,7 +437,8 @@
                 <!-- Teacher 3 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80" class="teacher-img" alt="Kamrul Islam">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80"
+                            class="teacher-img" alt="Kamrul Islam">
                         <div class="teacher-info">
                             <h5 class="teacher-name">Kamrul Islam</h5>
                             <p class="small text-muted mb-3">Math Specialist</p>
@@ -332,7 +452,8 @@
                 <!-- Teacher 4 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" class="teacher-img" alt="Sharmin Akter">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"
+                            class="teacher-img" alt="Sharmin Akter">
                         <div class="teacher-info">
                             <h5 class="teacher-name">Sharmin Akter</h5>
                             <p class="small text-muted mb-3">Science Teacher</p>
@@ -353,7 +474,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>Beroil GPS</h5>
+                    <h5>Berail GPS</h5>
                     <p class="text-white">Cultivating knowledge and ethics in the hearts of students.</p>
                 </div>
                 <div class="col-md-4 text-center  d-md-block d-none">
@@ -369,7 +490,7 @@
                 </div>
             </div>
             <hr>
-            <p class="text-center mb-0">&copy; 2026 Beroil Government Primary School</p>
+            <p class="text-center mb-0">&copy; 2026 Berail Government Primary School</p>
         </div>
     </footer>
 
@@ -383,4 +504,5 @@
 
     </script>
 </body>
+
 </html>
