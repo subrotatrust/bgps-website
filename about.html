@@ -204,9 +204,11 @@
             opacity: 1;
             color: var(--secondary);
         }
-        .teacher-card>img{
+
+        .teacher-card>img {
             height: 210px;
         }
+
         /* Back to top button */
         #btn-back-to-top {
             position: fixed;
@@ -249,14 +251,19 @@
             font-family: "IBM Plex Serif", serif;
         }
 
-        
-        #vanta-ring-canvas {
+        .navbar {
+            position: fixed;
             width: 100%;
-            height: fit-content;
-            margin: 0;
-            padding: 0;
+            padding-bottom: 100px;
         }
 
+
+    #vanta-birds-canvas {
+    background-color: #050e1b;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
     <!-- google font  -->
@@ -272,7 +279,7 @@
 
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 shadow-sm" id="navbar">
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top py-3 shadow-sm">
         <div class="container">
             <a class="navbar-brand p-0 d-lg-none d-md-block" href="index.html">
                 <img src="images/bgps_logo.png" alt="BGPS Logo" style="height: 60px; width: 60px;">
@@ -329,7 +336,7 @@
     </header>
 
     <!-- SECTION 1: OUR JOURNEY -->
-    <section id="vanta-ring-canvas">
+    <section id="vanta-birds-canvas">
         <div class="container py-4 my-3">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
@@ -342,11 +349,13 @@
                     <h6 class="text-secondary fw-bold text-uppercase mb-3">Our Journey</h6>
                     <h2 class="section-title">Rooted in Knowledge, Growing in Character</h2>
                     <div style="background-color: rgba(5, 5, 46, 0.5); padding: 10px;">
-                        <p class="lead-text text-white fw-medium">Berail Government Primary School has been a pillar of the
-                        community for over 50 years.</p>
-                    <p class="text-white fw-bold">Since our founding in 1990, we have evolved from a small village school into a
-                        modern primary institution. We focus not only on the National Curriculum but also on digital
-                        literacy, sports, and cultural development.</p>
+                        <p class="lead-text text-white fw-medium">Berail Government Primary School has been a pillar of
+                            the
+                            community for over 50 years.</p>
+                        <p class="text-white fw-bold">Since our founding in 1990, we have evolved from a small village
+                            school into a
+                            modern primary institution. We focus not only on the National Curriculum but also on digital
+                            literacy, sports, and cultural development.</p>
 
                     </div>
                     <div class="row mt-4 g-4">
@@ -405,7 +414,7 @@
     </section>
 
     <!-- SECTION 3: TEACHERS -->
-    <section id="vanta-ring-canvas">
+    <section id="vanta-birds-canvas">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                 <h2 class="section-title text-success">Meet Our Educators</h2>
@@ -431,7 +440,7 @@
                         <div class="teacher-info">
                             <h5 class="teacher-name">Nusrat Jahan</h5>
                             <p class="small text-muted mb-3">English Teacher</p>
-        
+
                         </div>
                     </div>
                 </div>
@@ -455,7 +464,7 @@
                         <div class="teacher-info">
                             <h5 class="teacher-name">Sharmin Akter</h5>
                             <p class="small text-muted mb-3">Science Teacher</p>
-                
+
                         </div>
                     </div>
                 </div>
@@ -496,22 +505,31 @@
     <!-- vanta  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 
     <script>
-        document.querySelectorAll('#vanta-ring-canvas').forEach((element) => {
-            VANTA.RINGS({
-                el: element, // Pass the element object directly
-                mouseControls: true,
-                touchControls: true,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                color: 0x28a745,
-                backgroundColor: 0x080f18
-            });
+        document.querySelectorAll('#vanta-birds-canvas').forEach((element) => {
+           VANTA.BIRDS({
+        el: element, // Use the element from the loop directly
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        backgroundColor: 0x050e1b, // Fixed: Added leading zero for 6-digit hex
+        color1: 0x28a5,         // School Green
+        color2: 0x16ff5,         // Educational Blue
+        birdSize: 1.50,           // Reduced slightly for a cleaner look
+        wingSpan: 20.00,
+        speedLimit: 5.00,
+        separation: 50.00,
+        alignment: 50.00,
+        cohesion: 50.00,
+        quantity: 4           // Adjust quantity for performance
+    })
         });
-
         // Initialize Animations
         AOS.init({ duration: 1000, once: true });
 
