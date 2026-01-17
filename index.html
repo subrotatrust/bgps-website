@@ -16,7 +16,8 @@
     <style>
         :root {
             --primary: #006837;
-            --secondary: #102961;;
+            --secondary: #102961;
+            ;
         }
 
         /* --- FIX STARTS HERE --- */
@@ -155,6 +156,13 @@
         .body {
             font-family: "IBM Plex Serif", serif;
         }
+
+        #vanta-globe-canvas {
+            width: 100%;
+            height: fit-content;
+            margin: 0;
+            padding: 0;
+        }
     </style>
     <link rel="shortcut icon" href="images/bgps_logo.png" type="image/x-icon">
     <!-- google font  -->
@@ -254,57 +262,63 @@
     </header>
 
     <!-- Admission Seaction -->
-    <section class="py-5 bg-light my-3" id="admission">
+
+    <section class="py-5 bg-light my-3" id="vanta-globe-canvas">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h6 class="text-secondary fw-bold text-uppercase">Admissions 2026</h6>
+                    <h6 class="text-secondary fw-bold text-uppercase" style="letter-spacing: 1px;">Admissions Open</h6>
                     <h2 class="fw-bold mb-4" style="color: var(--primary);">Join Our Learning Community</h2>
-                    <p class="text-muted mb-4">Admissions are now open for the 2026 academic session at Berail Govt.
-                        Primary School. We are committed to providing quality primary education and building a strong
-                        foundation for your child's future.</p>
+                    <p class="text-white mb-4">Enroll your child in our current academic session at Berail Govt. Primary
+                        School. We are committed to providing a quality foundation and a nurturing environment for every
+                        student's growth.</p>
 
                     <div class="admission-steps mt-4">
                         <div class="d-flex mb-3 align-items-center">
-                            <div class="step-num">1</div>
+                            <div class="step-num bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px; min-width: 40px;">1</div>
                             <div class="ms-3">
                                 <h6 class="fw-bold mb-0">Collect Application Form</h6>
-                                <small class="text-muted">Available at the school administrative office during school
+                                <small class="text-white">Available at the school administrative office during office
                                     hours.</small>
                             </div>
                         </div>
                         <div class="d-flex mb-3 align-items-center">
-                            <div class="step-num">2</div>
+                            <div class="step-num bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px; min-width: 40px;">2</div>
                             <div class="ms-3">
                                 <h6 class="fw-bold mb-0">Submit Documents</h6>
-                                <small class="text-muted">Attach Birth Certificate, Parent's NID, and passport-sized
+                                <small class="text-white">Attach Birth Certificate, Parent's NID, and passport-sized
                                     photos.</small>
                             </div>
                         </div>
                         <div class="d-flex mb-4 align-items-center">
-                            <div class="step-num">3</div>
+                            <div class="step-num bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 40px; height: 40px; min-width: 40px;">3</div>
                             <div class="ms-3">
                                 <h6 class="fw-bold mb-0">Confirm Admission</h6>
-                                <small class="text-muted">Complete the process after a brief student-teacher
+                                <small class="text-white">Finalize the process through a friendly student-teacher
                                     interaction.</small>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-4">
-                        <a href="admission.html" class="btn btn-success btn-lg rounded-pill px-4 shadow me-2 my-3">Apply
+                        <a href="admission.html" class="btn btn-success btn-lg rounded-pill px-4 shadow me-2 my-2">Apply
                             Online</a>
-                        <a href="tel:+8801798985161" class="btn btn-outline-dark btn-lg rounded-pill px-4 my-3">Contact
+                        <a href="tel:+8801798985161" class="btn btn-outline-primary btn-lg rounded-pill px-4 my-2">Contact
                             Office</a>
                     </div>
                 </div>
 
                 <div class="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="zoom-in">
-                    <div class="admission-img-wrapper position-relative">
-                        <div class="experience-badge shadow-lg">
-                            <span class="d-block h3 fw-bold mb-0">35+</span>
-                            <span class="small text-uppercase">Years of Excellence</span>
+                    <div class="admission-img-wrapper position-relative px-3">
+                        <div class="experience-badge shadow-lg position-absolute top-0 start-0 bg-white p-3 rounded-4 text-center"
+                            style="z-index: 2; transform: translate(-10%, -10%);">
+                            <span class="d-block h3 fw-bold mb-0 text-success">35+</span>
+                            <span class="small text-uppercase fw-bold text-muted">Years of<br>Excellence</span>
                         </div>
+
                         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
                             alt="School Admission" class="img-fluid rounded-4 shadow-lg border border-5 border-white">
                     </div>
@@ -312,7 +326,6 @@
             </div>
         </div>
     </section>
-
     <!-- Removed data-aos="fade-up" from the section to prevent container jump, applied to row instead -->
     <section class="container">
         <div class="row text-center g-4" data-aos="fade-up">
@@ -354,8 +367,9 @@
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
                     <div class="notice-board shadow-sm mb-3">
-                        <span class="badge bg-danger">New</span>
-                        <h5 class="mt-2">Annual Sports Day 2026 Registration Started!</h5>
+                        <span class="badge bg-danger">Sports</span>
+                        <h5 class="mt-2"> Annual Sports registration begins in February every year. All students are
+                            encouraged to participate and showcase their talents.</h5>
                     </div>
                     <div class="notice-board shadow-sm mb-3">
                         <span class="badge bg-primary">Update</span>
@@ -368,7 +382,7 @@
 
     <!-- SECTION 4: Facilities -->
 
-    <section class="py-5 bg-dark text-white">
+    <section class="py-5 bg-dark text-white" id="vanta-globe-canvas">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Our School Facilities</h2>
@@ -437,12 +451,13 @@
             </div>
         </div>
     </section>
-    <!-- SECTION 7: Explore Our Campus -->
-    <section class="bg-dark text-white py-5">
+  
+    <!-- SECTION 7: Explore Our Students -->
+    <section class="bg-dark text-white py-5 bg-secondary">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold display-5">Explore Our Students </h2>
-                <p class="text-muted">A glimpse into our world-class facilities and learning environment.</p>
+                <p class="text-white">A glimpse into our world-class facilities and learning environment.</p>
             </div>
 
             <div class="row g-3">
@@ -574,7 +589,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
+    <!-- vanta  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+    <script type="text/javascript">
+
+ document.querySelectorAll('#vanta-globe-canvas').forEach((element) => {
+        VANTA.GLOBE({
+            el: element, // Pass the element object directly
+            mouseControls: true,
+            touchControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            color: 0x28a745,
+            backgroundColor: 0x080f18
+        });
+    });
+    
         // Initialize AOS
         AOS.init({
             duration: 1000,
@@ -596,6 +630,9 @@
             autoplay: true,
             responsive: { 0: { items: 1 }, 768: { items: 2 }, 1000: { items: 3 } }
         });
+
+   
+
     </script>
 </body>
 
